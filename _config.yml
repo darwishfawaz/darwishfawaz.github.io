@@ -1,17 +1,35 @@
-title: Darwish Fawaz | Infrastructure & Security Architect
+# =========================================================
+# DF PERSONAL WEBSITE
+# Darwish Fawaz
+# Infrastructure & Security Architect
+# =========================================================
+
+title: "Darwish Fawaz"
 
 description: >
-  Infrastructure, Cloud, Security, AI and Automation Architecture
+  Darwish Fawaz — Infrastructure & Security Architect
+  specialising in Cloud, Security, AI and Automation.
 
 url: "https://darwishfawaz.github.io"
 
 author:
-  name: Darwish Fawaz
+  name: "Darwish Fawaz"
 
+# GitHub Pages
+github_username: darwishfawaz
+
+# Disable Jekyll theme
+theme: null
+
+# Markdown configuration
 markdown: kramdown
 
 kramdown:
   input: GFM
 
-plugins:
-  - jekyll-seo-tag
+# Exclude files from the Jekyll build
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
