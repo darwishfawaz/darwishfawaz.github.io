@@ -1,3 +1,17 @@
-theme: jekyll-theme-minimal
-title: Darwish Fawaz | Infrastructure and Security Architect
-description: Helping organisations build secure, resilient, and modern cloud platforms through architecture, automation, and security-first design.
+title: Darwish Fawaz | Infrastructure & Security Architect
+
+description: >
+  Infrastructure, Cloud, Security, AI and Automation Architecture
+
+url: "https://darwishfawaz.github.io"
+
+author:
+  name: Darwish Fawaz
+
+markdown: kramdown
+
+kramdown:
+  input: GFM
+
+plugins:
+  - jekyll-seo-tag
