@@ -1,35 +1,22 @@
-# =========================================================
-# DF PERSONAL WEBSITE
-# Darwish Fawaz
-# Infrastructure & Security Architect
-# =========================================================
-
-title: "Darwish Fawaz"
-
-description: >
-  Darwish Fawaz — Infrastructure & Security Architect
-  specialising in Cloud, Security, AI and Automation.
-
+# Site settings
+title: Darwish Fawaz
+description: Cloud Infrastructure & Security Architect specialising in Azure, Zero Trust, Microsoft Sentinel, DevSecOps and AI platforms for regulated financial services.
 url: "https://darwishfawaz.github.io"
-
+baseurl: ""
+lang: en-GB
 author:
-  name: "Darwish Fawaz"
+  name: Darwish Fawaz
+  email: fawazdanny@gmail.com
 
-# GitHub Pages
-github_username: darwishfawaz
+# GitHub Pages supported plugin (generates /sitemap.xml)
+plugins:
+  - jekyll-sitemap
 
-# Disable Jekyll theme
-theme: null
-
-# Markdown configuration
-markdown: kramdown
-
-kramdown:
-  input: GFM
-
-# Exclude files from the Jekyll build
+# Keep repo housekeeping files out of the published site
 exclude:
   - README.md
+  - LICENSE
   - Gemfile
   - Gemfile.lock
   - node_modules
+  - vendor
