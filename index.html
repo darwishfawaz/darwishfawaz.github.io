@@ -1,1443 +1,708 @@
+---
+layout: null
+---
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB">
 <head>
-    <meta charset="UTF-8">
-
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
-
-    <meta name="description"
-          content="Darwish Fawaz — Infrastructure & Security Architect specialising in Cloud, Security, AI and Automation.">
-
-    <meta name="author"
-          content="Darwish Fawaz">
-
-    <title>Darwish Fawaz | Infrastructure & Security Architect</title>
-
-    <style>
-
-        /* =====================================================
-           DF BRAND
-           ===================================================== */
-
-        :root {
-            --cyber-teal: #03313A;
-            --aqua-foam: #8FFFE0;
-            --aqua-soft: #DFFFF6;
-
-            --dark: #07191D;
-            --dark-2: #0B2429;
-
-            --text: #183337;
-            --muted: #688083;
-
-            --white: #FFFFFF;
-            --border: #D7E8E5;
-
-            --max-width: 1180px;
-        }
-
-
-        /* =====================================================
-           RESET
-           ===================================================== */
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family:
-                Inter,
-                -apple-system,
-                BlinkMacSystemFont,
-                "Segoe UI",
-                Roboto,
-                Helvetica,
-                Arial,
-                sans-serif;
-
-            background: #ffffff;
-            color: var(--text);
-            line-height: 1.6;
-        }
-
-        a {
-            color: inherit;
-            text-decoration: none;
-        }
-
-
-        /* =====================================================
-           NAVIGATION
-           ===================================================== */
-
-        nav {
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-
-            background: rgba(3, 49, 58, 0.94);
-            backdrop-filter: blur(12px);
-
-            border-bottom: 1px solid rgba(143, 255, 224, 0.12);
-        }
-
-        .nav-inner {
-            max-width: var(--max-width);
-            margin: auto;
-
-            height: 72px;
-
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-
-            padding: 0 25px;
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-
-            color: white;
-            font-weight: 800;
-            letter-spacing: 1px;
-            font-size: 20px;
-        }
-
-        .logo-mark {
-            width: 38px;
-            height: 38px;
-
-            border-radius: 10px;
-
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            background: var(--aqua-foam);
-            color: var(--cyber-teal);
-
-            font-weight: 900;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 28px;
-
-            color: #CBE3DF;
-            font-size: 14px;
-            font-weight: 600;
-        }
-
-        .nav-links a:hover {
-            color: var(--aqua-foam);
-        }
-
-
-        /* =====================================================
-           HERO
-           ===================================================== */
-
-        .hero {
-            position: relative;
-            overflow: hidden;
-
-            background: var(--cyber-teal);
-            color: white;
-        }
-
-        .hero:before {
-            content: "";
-
-            position: absolute;
-
-            width: 650px;
-            height: 650px;
-
-            right: -220px;
-            top: -280px;
-
-            border-radius: 50%;
-
-            background: var(--aqua-foam);
-            opacity: 0.07;
-        }
-
-        .hero:after {
-            content: "";
-
-            position: absolute;
-
-            width: 420px;
-            height: 420px;
-
-            left: -220px;
-            bottom: -250px;
-
-            border-radius: 50%;
-
-            border: 1px solid rgba(143,255,224,0.15);
-        }
-
-        .hero-inner {
-            position: relative;
-            z-index: 2;
-
-            max-width: var(--max-width);
-            margin: auto;
-
-            padding: 110px 25px 120px;
-        }
-
-        .eyebrow {
-            color: var(--aqua-foam);
-
-            font-size: 13px;
-            font-weight: 800;
-
-            letter-spacing: 3px;
-            text-transform: uppercase;
-
-            margin-bottom: 22px;
-        }
-
-        .hero h1 {
-            font-size: clamp(46px, 7vw, 82px);
-            line-height: 0.98;
-
-            letter-spacing: -3px;
-
-            margin-bottom: 22px;
-        }
-
-        .hero h2 {
-            color: var(--aqua-foam);
-
-            font-size: clamp(22px, 3vw, 32px);
-            font-weight: 500;
-
-            margin-bottom: 28px;
-        }
-
-        .hero-description {
-            max-width: 760px;
-
-            color: #D5EBE7;
-
-            font-size: 20px;
-            line-height: 1.7;
-        }
-
-
-        /* =====================================================
-           BUTTONS
-           ===================================================== */
-
-        .buttons {
-            display: flex;
-            flex-wrap: wrap;
-
-            gap: 12px;
-
-            margin-top: 38px;
-        }
-
-        .button {
-            display: inline-block;
-
-            padding: 13px 22px;
-
-            border-radius: 9px;
-
-            font-weight: 700;
-            font-size: 14px;
-
-            transition: 0.2s ease;
-        }
-
-        .button-primary {
-            background: var(--aqua-foam);
-            color: var(--cyber-teal);
-        }
-
-        .button-primary:hover {
-            transform: translateY(-2px);
-        }
-
-        .button-secondary {
-            color: white;
-
-            border: 1px solid rgba(255,255,255,0.3);
-        }
-
-        .button-secondary:hover {
-            border-color: var(--aqua-foam);
-            color: var(--aqua-foam);
-        }
-
-
-        /* =====================================================
-           MAIN
-           ===================================================== */
-
-        main {
-            max-width: var(--max-width);
-            margin: auto;
-
-            padding: 80px 25px;
-        }
-
-        section {
-            margin-bottom: 100px;
-        }
-
-        .section-label {
-            color: #3B8D82;
-
-            font-size: 13px;
-            font-weight: 800;
-
-            letter-spacing: 2px;
-            text-transform: uppercase;
-
-            margin-bottom: 8px;
-        }
-
-        section h2 {
-            color: var(--cyber-teal);
-
-            font-size: 38px;
-            line-height: 1.15;
-
-            letter-spacing: -1px;
-
-            margin-bottom: 18px;
-        }
-
-        .section-intro {
-            max-width: 780px;
-
-            color: var(--muted);
-
-            font-size: 18px;
-            line-height: 1.75;
-        }
-
-
-        /* =====================================================
-           ARCHITECTURE STATEMENT
-           ===================================================== */
-
-        .statement {
-            background: var(--cyber-teal);
-            color: white;
-
-            border-radius: 20px;
-
-            padding: 42px;
-
-            margin-top: 35px;
-        }
-
-        .statement strong {
-            color: var(--aqua-foam);
-
-            font-size: 21px;
-        }
-
-        .statement p {
-            margin-top: 12px;
-
-            color: #CBE3DF;
-
-            font-size: 17px;
-        }
-
-
-        /* =====================================================
-           CAPABILITY GRID
-           ===================================================== */
-
-        .grid {
-            display: grid;
-
-            grid-template-columns:
-                repeat(3, 1fr);
-
-            gap: 20px;
-
-            margin-top: 40px;
-        }
-
-        .card {
-            padding: 30px;
-
-            background: white;
-
-            border: 1px solid var(--border);
-
-            border-radius: 16px;
-
-            transition: 0.25s ease;
-        }
-
-        .card:hover {
-            transform: translateY(-4px);
-
-            border-color: #9CEBD9;
-
-            box-shadow:
-                0 15px 40px rgba(3,49,58,0.09);
-        }
-
-        .card-number {
-            color: #56B8A7;
-
-            font-size: 13px;
-            font-weight: 800;
-
-            letter-spacing: 1px;
-
-            margin-bottom: 18px;
-        }
-
-        .card h3 {
-            color: var(--cyber-teal);
-
-            font-size: 21px;
-
-            margin-bottom: 12px;
-        }
-
-        .card p {
-            color: var(--muted);
-
-            font-size: 15px;
-
-            line-height: 1.7;
-        }
-
-
-        /* =====================================================
-           TECHNOLOGY TAGS
-           ===================================================== */
-
-        .tags {
-            display: flex;
-
-            flex-wrap: wrap;
-
-            gap: 8px;
-
-            margin-top: 20px;
-        }
-
-        .tag {
-            display: inline-block;
-
-            background: var(--aqua-soft);
-
-            color: var(--cyber-teal);
-
-            padding: 6px 10px;
-
-            border-radius: 6px;
-
-            font-size: 12px;
-
-            font-weight: 700;
-        }
-
-
-        /* =====================================================
-           PROJECTS
-           ===================================================== */
-
-        .projects {
-            display: grid;
-
-            grid-template-columns:
-                repeat(2, 1fr);
-
-            gap: 22px;
-
-            margin-top: 40px;
-        }
-
-        .project {
-            padding: 32px;
-
-            border-radius: 16px;
-
-            background: #F8FCFB;
-
-            border: 1px solid var(--border);
-        }
-
-        .project-label {
-            color: #3D9387;
-
-            font-size: 12px;
-            font-weight: 800;
-
-            letter-spacing: 1.5px;
-
-            margin-bottom: 12px;
-        }
-
-        .project h3 {
-            color: var(--cyber-teal);
-
-            font-size: 23px;
-
-            margin-bottom: 12px;
-        }
-
-        .project p {
-            color: var(--muted);
-
-            line-height: 1.7;
-        }
-
-
-        /* =====================================================
-           PRINCIPLES
-           ===================================================== */
-
-        .principles {
-            display: grid;
-
-            grid-template-columns:
-                repeat(2, 1fr);
-
-            gap: 1px;
-
-            background: var(--border);
-
-            border: 1px solid var(--border);
-
-            border-radius: 16px;
-
-            overflow: hidden;
-
-            margin-top: 40px;
-        }
-
-        .principle {
-            background: white;
-
-            padding: 30px;
-        }
-
-        .principle span {
-            display: block;
-
-            color: #4BAA9B;
-
-            font-size: 12px;
-            font-weight: 800;
-
-            margin-bottom: 8px;
-        }
-
-        .principle h3 {
-            color: var(--cyber-teal);
-
-            font-size: 18px;
-
-            margin-bottom: 8px;
-        }
-
-        .principle p {
-            color: var(--muted);
-
-            font-size: 14px;
-        }
-
-
-        /* =====================================================
-           FOOTER
-           ===================================================== */
-
-        footer {
-            background: var(--cyber-teal);
-
-            color: white;
-
-            padding: 60px 25px;
-        }
-
-        .footer-inner {
-            max-width: var(--max-width);
-            margin: auto;
-
-            text-align: center;
-        }
-
-        footer h2 {
-            font-size: 32px;
-
-            margin-bottom: 10px;
-        }
-
-        footer p {
-            color: #BFDCD7;
-
-            margin-bottom: 25px;
-        }
-
-        .footer-links {
-            display: flex;
-
-            justify-content: center;
-
-            gap: 25px;
-
-            flex-wrap: wrap;
-        }
-
-        .footer-links a {
-            color: var(--aqua-foam);
-
-            font-weight: 700;
-        }
-
-        .copyright {
-            margin-top: 35px;
-
-            color: #729B96;
-
-            font-size: 12px;
-        }
-
-
-        /* =====================================================
-           MOBILE
-           ===================================================== */
-
-        @media (max-width: 800px) {
-
-            .nav-links {
-                display: none;
-            }
-
-            .hero-inner {
-                padding-top: 80px;
-                padding-bottom: 85px;
-            }
-
-            .hero h1 {
-                letter-spacing: -2px;
-            }
-
-            .grid {
-                grid-template-columns: 1fr;
-            }
-
-            .projects {
-                grid-template-columns: 1fr;
-            }
-
-            .principles {
-                grid-template-columns: 1fr;
-            }
-
-            section {
-                margin-bottom: 75px;
-            }
-
-            main {
-                padding-top: 60px;
-            }
-
-        }
-
-
-        @media (max-width: 480px) {
-
-            .hero h1 {
-                font-size: 45px;
-            }
-
-            .hero-description {
-                font-size: 17px;
-            }
-
-            .statement {
-                padding: 28px;
-            }
-
-            .card,
-            .project {
-                padding: 25px;
-            }
-
-        }
-
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Darwish Fawaz | Cloud Infrastructure &amp; Security Architect</title>
+  <meta name="description" content="Cloud Infrastructure &amp; Security Architect in London. Azure landing zones, Zero Trust, Microsoft Sentinel, DevSecOps and AI platforms for regulated financial services.">
+  <meta name="author" content="Darwish Fawaz">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#0b1b2e">
+  <link rel="canonical" href="https://darwishfawaz.github.io/">
+
+  <!-- Social preview -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Darwish Fawaz | Cloud Infrastructure &amp; Security Architect">
+  <meta property="og:description" content="Secure cloud platforms for regulated financial services: Azure, Zero Trust, Sentinel, DevSecOps and AI.">
+  <meta property="og:url" content="https://darwishfawaz.github.io/">
+  <meta name="twitter:card" content="summary">
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b1b2e'/%3E%3Ctext x='32' y='42' font-family='Arial,sans-serif' font-weight='700' font-size='28' text-anchor='middle' fill='%23ffffff'%3EDF%3C/text%3E%3C/svg%3E">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Hanken+Grotesk:wght@400..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <!-- Apply saved theme before first paint to avoid a flash -->
+  <script>
+    try {
+      var t = localStorage.getItem("theme");
+      if (t === "light" || t === "dark") document.documentElement.setAttribute("data-theme", t);
+    } catch (e) {}
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Darwish Fawaz",
+    "jobTitle": "Cloud Infrastructure & Security Architect",
+    "url": "https://darwishfawaz.github.io/",
+    "email": "mailto:fawazdanny@gmail.com",
+    "address": { "@type": "PostalAddress", "addressLocality": "London", "addressCountry": "GB" },
+    "sameAs": [
+      "https://www.linkedin.com/in/darwish-fawaz/",
+      "https://github.com/darwishfawaz"
+    ],
+    "knowsAbout": ["Microsoft Azure", "Zero Trust", "Microsoft Sentinel", "Terraform", "DevSecOps", "FinOps", "AI landing zones"]
+  }
+  </script>
 </head>
 
-
 <body>
+  <a class="skip" href="#main">Skip to content</a>
 
-
-<!-- =========================================================
-     NAVIGATION
-     ========================================================= -->
-
-<nav>
-
-    <div class="nav-inner">
-
-        <a href="#" class="logo">
-
-            <span class="logo-mark">DF</span>
-
-            <span>Darwish Fawaz</span>
-
-        </a>
-
-
-        <div class="nav-links">
-
-            <a href="#architecture">Architecture</a>
-
-            <a href="#capabilities">Capabilities</a>
-
-            <a href="#work">Selected Work</a>
-
-            <a href="#technology">Technology</a>
-
-            <a href="#contact">Contact</a>
-
-        </div>
-
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <a class="brand" href="#top" aria-label="Darwish Fawaz, home">
+        <span class="brand-mark" aria-hidden="true">DF</span>
+        <span>Darwish Fawaz</span>
+      </a>
+      <nav aria-label="Primary">
+        <ul class="nav-links">
+          <li><a href="#work">Work</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#writing">LinkedIn</a></li>
+          <li><a href="#principles">Approach</a></li>
+        </ul>
+      </nav>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch colour theme">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="9"></circle>
+            <path d="M12 3v18" ></path>
+            <path d="M12 3a9 9 0 0 1 0 18z" fill="currentColor"></path>
+          </svg>
+        </button>
+        <a class="btn btn-primary btn-sm" href="#contact">Contact</a>
+      </div>
     </div>
+  </header>
 
-</nav>
-
-
-
-<!-- =========================================================
-     HERO
-     ========================================================= -->
-
-<header class="hero">
-
-    <div class="hero-inner">
-
-        <div class="eyebrow">
-            DF // CLOUD • SECURITY • AI • AUTOMATION
+  <main id="main">
+    <!-- ================= Hero ================= -->
+    <section class="hero" id="top">
+      <div class="wrap hero-grid">
+        <div>
+          <p class="hero-kicker">Darwish Fawaz, Cloud Infrastructure &amp; Security Architect in London</p>
+          <h1>Secure cloud platforms for regulated financial services.</h1>
+          <p class="hero-lead">
+            I architect Azure and Microsoft 365 environments where security, cost and delivery speed have to hold together.
+            20+ years in enterprise IT, 8+ of them specialising in Azure, Zero Trust and AI platforms.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#work">See selected work</a>
+            <a class="btn" href="#contact">Get in touch</a>
+          </div>
+          <p class="hero-note">Currently lead architect at the Financial Services Compensation Scheme.</p>
         </div>
 
+        <!-- Interactive hub-and-spoke diagram, built in the script at the bottom of the page -->
+        <div class="diagram">
+          <svg id="arch" viewBox="0 0 560 560" role="group"
+               aria-label="Architecture diagram with identity at the centre, connected to landing zones, networking, security operations, DevSecOps, AI platform and FinOps"></svg>
+          <div class="dia-caption" aria-live="polite">
+            <h2 id="diaTitle"></h2>
+            <p id="diaText"></p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        <h1>
-            Darwish<br>
-            Fawaz
-        </h1>
+    <!-- ================= Outcomes ================= -->
+    <section class="section" style="padding-top:0" aria-label="Key outcomes">
+      <div class="wrap">
+        <ul class="stats">
+          <li class="stat">
+            <div class="stat-value">30%</div>
+            <p class="stat-label">lower annual Azure spend through a FinOps programme</p>
+          </li>
+          <li class="stat">
+            <div class="stat-value">60%+</div>
+            <p class="stat-label">faster environment provisioning with landing zones</p>
+          </li>
+          <li class="stat">
+            <div class="stat-value">20+</div>
+            <p class="stat-label">years in enterprise IT, 8+ specialised in Azure and M365</p>
+          </li>
+          <li class="stat">
+            <div class="stat-value">8</div>
+            <p class="stat-label">certifications across Microsoft, HashiCorp, AWS and Cisco</p>
+          </li>
+        </ul>
+      </div>
+    </section>
 
+    <!-- ================= What I do ================= -->
+    <section class="section section--tint" id="capabilities">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Architecture that ships, from design authority to hands-on delivery.</h2>
+          <p>I work across cloud, identity, security operations and AI, and I stay close enough to the build to make sure the design survives contact with production.</p>
+        </div>
+        <ul class="caps">
+          <li class="cap">
+            <h3>Cloud architecture</h3>
+            <p>Enterprise-scale Azure landing zones on the Cloud Adoption Framework, hub-spoke networking, hybrid connectivity and policy guardrails, with Defender for Cloud covering AWS and GCP.</p>
+            <ul class="tags"><li class="tag">Azure</li><li class="tag">Landing zones</li><li class="tag">Azure Policy</li><li class="tag">AWS &amp; GCP</li></ul>
+          </li>
+          <li class="cap">
+            <h3>Identity and Zero Trust</h3>
+            <p>Identity-driven access built on Entra ID Conditional Access, PIM and Intune device compliance, replacing implicit network trust with continuous evaluation.</p>
+            <ul class="tags"><li class="tag">Entra ID</li><li class="tag">Conditional Access</li><li class="tag">PIM</li><li class="tag">Zscaler ZPA</li></ul>
+          </li>
+          <li class="cap">
+            <h3>Security operations</h3>
+            <p>Microsoft Sentinel SIEM and SOAR joined up with Defender XDR, Defender for Cloud and Copilot for Security, with playbooks that cut response time.</p>
+            <ul class="tags"><li class="tag">Sentinel</li><li class="tag">Defender XDR</li><li class="tag">KQL</li><li class="tag">Copilot for Security</li></ul>
+          </li>
+          <li class="cap">
+            <h3>AI and data platforms</h3>
+            <p>Secure landing zones where teams can build and run AI safely: private connectivity, governed data ingestion and posture controls from day one.</p>
+            <ul class="tags"><li class="tag">Microsoft Foundry</li><li class="tag">Databricks</li><li class="tag">Cosmos DB</li><li class="tag">Data Factory</li></ul>
+          </li>
+          <li class="cap">
+            <h3>Automation and DevSecOps</h3>
+            <p>Terraform and Azure DevOps as the standard way to build, with state isolation, approval gates, policy validation and SAST/DAST in the pipeline.</p>
+            <ul class="tags"><li class="tag">Terraform</li><li class="tag">Azure DevOps</li><li class="tag">Bicep</li><li class="tag">Fortify</li></ul>
+          </li>
+          <li class="cap">
+            <h3>Governance and FinOps</h3>
+            <p>Technical authority at architecture review boards and executive forums, working to NIST, ISO 27001, CIS and UK financial services regulatory standards.</p>
+            <ul class="tags"><li class="tag">NIST</li><li class="tag">ISO 27001</li><li class="tag">CIS</li><li class="tag">FinOps</li></ul>
+          </li>
+        </ul>
+      </div>
+    </section>
 
-        <h2>
-            Infrastructure &amp; Security Architect
-        </h2>
-
-
-        <p class="hero-description">
-
-            Designing secure, resilient and modern enterprise
-            platforms across cloud, infrastructure, identity,
-            cybersecurity and AI.
-
-        </p>
-
-
-        <div class="buttons">
-
-            <!-- CHANGE YOUR EMAIL HERE -->
-
-            <a
-                href="mailto:YOUR_EMAIL"
-                class="button button-primary">
-
-                Get in touch
-
-            </a>
-
-
-            <a
-                href="https://www.linkedin.com/"
-                class="button button-secondary">
-
-                LinkedIn
-
-            </a>
-
-
-            <a
-                href="https://github.com/darwishfawaz"
-                class="button button-secondary">
-
-                GitHub
-
-            </a>
-
+    <!-- ================= Selected work ================= -->
+    <section class="section" id="work">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Selected work</h2>
+          <p>Programmes I have designed and delivered in a regulated UK financial services environment. Open any project for the detail.</p>
         </div>
 
+        <div class="cases">
+          <details class="case" open>
+            <summary>
+              <span class="case-title">Enterprise Azure landing zone</span>
+              <span class="case-result">Highly available, disaster-ready foundations for 6+ environments. Provisioning time cut by over 60%.</span>
+              <span class="case-icon" aria-hidden="true"></span>
+            </summary>
+            <div class="case-body">
+              <ul>
+                <li>Hub-spoke topology connected to multiple datacentres and partner networks.</li>
+                <li>Azure Firewall, Application Gateway, WAF, Front Door, Key Vault and Private Endpoints as standard building blocks.</li>
+                <li>Azure Policy guardrails and Azure Monitor Baseline Alerts (AMBA) deployed through Policy and Bicep for a consistent, Well-Architected observability baseline.</li>
+              </ul>
+              <ul class="tags"><li class="tag">Azure CAF</li><li class="tag">Azure Firewall</li><li class="tag">Front Door</li><li class="tag">Azure Policy</li><li class="tag">AMBA</li></ul>
+            </div>
+          </details>
+
+          <details class="case">
+            <summary>
+              <span class="case-title">Cloud cost optimisation</span>
+              <span class="case-result">About 30% off annual Azure spend with no loss of availability or performance.</span>
+              <span class="case-icon" aria-hidden="true"></span>
+            </summary>
+            <div class="case-body">
+              <ul>
+                <li>Reserved Instances and Savings Plans matched to real usage.</li>
+                <li>Autoscaling, storage lifecycle policies and environment scheduling.</li>
+                <li>Microsoft Sentinel ingestion optimisation to keep security telemetry affordable.</li>
+              </ul>
+              <ul class="tags"><li class="tag">FinOps</li><li class="tag">Reserved Instances</li><li class="tag">Savings Plans</li><li class="tag">Autoscaling</li></ul>
+            </div>
+          </details>
+
+          <details class="case">
+            <summary>
+              <span class="case-title">Zero Trust access transformation</span>
+              <span class="case-result">Legacy VPN replaced with identity-driven, context-aware access.</span>
+              <span class="case-icon" aria-hidden="true"></span>
+            </summary>
+            <div class="case-body">
+              <ul>
+                <li>Zscaler Private Access integrated with Entra ID Conditional Access, PIM and Intune device compliance.</li>
+                <li>Least-privilege access with continuous evaluation, removing implicit trust for remote users.</li>
+                <li>Earlier, a zero-downtime migration from on-premises Pulse Connect Secure to an Azure-hosted VPN during the COVID-19 lockdown.</li>
+              </ul>
+              <ul class="tags"><li class="tag">Zscaler ZPA</li><li class="tag">Entra ID</li><li class="tag">Conditional Access</li><li class="tag">Intune</li></ul>
+            </div>
+          </details>
+
+          <details class="case">
+            <summary>
+              <span class="case-title">AI-driven security operations centre</span>
+              <span class="case-result">One detection and response platform across cloud, on-premises workloads and endpoints.</span>
+              <span class="case-icon" aria-hidden="true"></span>
+            </summary>
+            <div class="case-body">
+              <ul>
+                <li>Microsoft Sentinel SIEM and SOAR integrated with Defender XDR, Defender for Cloud and Copilot for Security.</li>
+                <li>Automated playbooks and joined-up telemetry improved detection and reduced mean time to respond.</li>
+                <li>AWS and GCP tenants brought under the same posture management and threat detection through Defender for Cloud.</li>
+              </ul>
+              <ul class="tags"><li class="tag">Sentinel</li><li class="tag">Defender XDR</li><li class="tag">SOAR</li><li class="tag">Copilot for Security</li></ul>
+            </div>
+          </details>
+
+          <details class="case">
+            <summary>
+              <span class="case-title">Infrastructure as code and DevSecOps</span>
+              <span class="case-result">Terraform and Azure DevOps adopted as the enterprise standard.</span>
+              <span class="case-icon" aria-hidden="true"></span>
+            </summary>
+            <div class="case-body">
+              <ul>
+                <li>Workspaces, state isolation, naming conventions and pull request approval gates.</li>
+                <li>Automated policy validation with Fortify SAST and DAST in the pipeline.</li>
+                <li>Configuration drift eliminated and deployment cycles shortened through fully automated provisioning.</li>
+              </ul>
+              <ul class="tags"><li class="tag">Terraform</li><li class="tag">Azure DevOps</li><li class="tag">Bicep</li><li class="tag">Fortify</li></ul>
+            </div>
+          </details>
+
+          <details class="case">
+            <summary>
+              <span class="case-title">AI and data platform landing zone</span>
+              <span class="case-result">A governed foundation for teams to develop, deploy and operate AI safely on Microsoft Foundry.</span>
+              <span class="case-icon" aria-hidden="true"></span>
+            </summary>
+            <div class="case-body">
+              <ul>
+                <li>Data Factory, Databricks, Cosmos DB and Cognitive Services behind private endpoints.</li>
+                <li>CSPM controls, governed data ingestion and analytics pipelines.</li>
+                <li>Safe model deployment at scale, with security built into the platform rather than added later.</li>
+              </ul>
+              <ul class="tags"><li class="tag">Microsoft Foundry</li><li class="tag">Databricks</li><li class="tag">Cosmos DB</li><li class="tag">CSPM</li></ul>
+            </div>
+          </details>
+
+          <details class="case">
+            <summary>
+              <span class="case-title">Bank of England IDOBI programme</span>
+              <span class="case-result">Key cloud and security architect for FSCS's contribution to the Bank of England's depositor outcomes programme.</span>
+              <span class="case-icon" aria-hidden="true"></span>
+            </summary>
+            <div class="case-body">
+              <div>
+                <ul>
+                  <li>Azure-based architecture and integration patterns for regulated financial data processing.</li>
+                  <li>Secure electronic payment workflows and cross-sector data exchange, designed for compliance and resilience.</li>
+                </ul>
+                <a class="case-link" href="https://www.bankofengland.co.uk/statement/2023/improving-depositor-outcomes-in-bank-or-building-society-insolvency" target="_blank" rel="noopener">Read the Bank of England statement</a>
+              </div>
+              <ul class="tags"><li class="tag">Azure</li><li class="tag">Regulated data</li><li class="tag">Payments</li><li class="tag">Resilience</li></ul>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= Experience ================= -->
+    <section class="section section--tint" id="experience">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Twenty years from server room to cloud platform.</h2>
+        </div>
+        <ol class="timeline">
+          <li class="job">
+            <div class="job-when">2017 to present</div>
+            <div>
+              <h3>Cloud Infrastructure &amp; Cybersecurity Architect</h3>
+              <p class="job-org">Financial Services Compensation Scheme</p>
+              <ul>
+                <li>Sole architect and technical lead for Azure and Microsoft 365, owning platform strategy, design authority, security governance and hands-on delivery.</li>
+                <li>Leads a cross-functional infrastructure team covering 2nd and 3rd-line support, and acts as the technical authority at CAB, TDA and executive forums.</li>
+                <li>Runs annual DR testing, penetration test cycles and hardening remediation.</li>
+              </ul>
+            </div>
+          </li>
+          <li class="job">
+            <div class="job-when">2005 to 2017</div>
+            <div>
+              <h3>IT Technical Manager</h3>
+              <p class="job-org">SkyNet Worldwide Express</p>
+              <ul>
+                <li>Progressed from Infrastructure Engineer to IT Technical Manager across UK and international sites.</li>
+                <li>Built shipping and routing automation and a paperless returns solution adopted by major retail clients.</li>
+                <li>Delivered PCI DSS hardening, network redesign and full infrastructure buildouts for new branches in Hong Kong, Germany and the Netherlands.</li>
+              </ul>
+            </div>
+          </li>
+        </ol>
+        <p class="edu">Education: Mathematics and Computer Science, Lebanese University.</p>
+      </div>
+    </section>
+
+    <!-- ================= Certifications ================= -->
+    <section class="section" id="certifications">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Certifications</h2>
+        </div>
+        <ul class="certs">
+          <li class="cert"><strong>Azure Solutions Architect Expert</strong><span>Microsoft Certified</span></li>
+          <li class="cert"><strong>Cybersecurity Architect Expert</strong><span>Microsoft Certified</span></li>
+          <li class="cert"><strong>Azure Security Engineer Associate</strong><span>Microsoft Certified</span></li>
+          <li class="cert"><strong>Azure Administrator Associate</strong><span>Microsoft Certified</span></li>
+          <li class="cert"><strong>Terraform Associate (003)</strong><span>HashiCorp Certified</span></li>
+          <li class="cert"><strong>Cloud Practitioner (CLF-C02)</strong><span>AWS Certified</span></li>
+          <li class="cert"><strong>CCNA and CCNP</strong><span>Cisco</span></li>
+          <li class="cert"><strong>ITIL Foundation</strong><span>ITIL</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ================= Latest from LinkedIn ================= -->
+    <section class="section section--tint" id="writing">
+      <div class="wrap">
+        <div class="feed-head">
+          <div class="section-head">
+            <h2>Latest from LinkedIn</h2>
+            <p>Notes on cloud, security and AI as I publish them.</p>
+          </div>
+          <a class="btn" href="https://www.linkedin.com/in/darwish-fawaz/" target="_blank" rel="noopener">Follow on LinkedIn</a>
+        </div>
+        <div class="posts" id="posts" aria-live="polite">
+          <div class="post post--skeleton" aria-hidden="true"></div>
+          <div class="post post--skeleton" aria-hidden="true"></div>
+          <div class="post post--skeleton" aria-hidden="true"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= Approach ================= -->
+    <section class="section" id="principles">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>How I approach architecture</h2>
+        </div>
+        <ul class="principles">
+          <li class="principle"><h3>Secure by design</h3><p>Security controls belong in the architecture, not bolted on after deployment.</p></li>
+          <li class="principle"><h3>Automate the repeatable</h3><p>Infrastructure should be reproducible, version-controlled and deployed through code.</p></li>
+          <li class="principle"><h3>Identity is the control plane</h3><p>Modern security starts with identity, privilege, device trust and continuous evaluation.</p></li>
+          <li class="principle"><h3>Architecture must ship</h3><p>A design has to survive implementation, operations, budgets and real-world constraints.</p></li>
+          <li class="principle"><h3>AI with guardrails</h3><p>AI adoption needs governed data, controlled identities, security boundaries and observability.</p></li>
+          <li class="principle"><h3>Evidence over slideware</h3><p>Decisions are validated through proofs of concept, testing and measurable outcomes.</p></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ================= Technology ================= -->
+    <section class="section section--tint" id="technology">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Technology I work with</h2>
+        </div>
+        <ul class="stack">
+          <li>Microsoft Azure</li><li>Microsoft 365</li><li>Entra ID</li><li>Intune</li><li>Defender XDR</li>
+          <li>Defender for Cloud</li><li>Microsoft Sentinel</li><li>Purview</li><li>Copilot for Security</li>
+          <li>Microsoft Foundry</li><li>Databricks</li><li>Cosmos DB</li><li>Terraform</li><li>Bicep</li>
+          <li>Azure DevOps</li><li>GitHub</li><li>KQL</li><li>Zscaler</li><li>AWS</li><li>Google Cloud</li>
+          <li>VMware vSphere</li><li>Cisco</li><li>Fortinet</li><li>Check Point</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= Contact ================= -->
+  <section class="contact" id="contact" aria-labelledby="contactTitle">
+    <div class="wrap">
+      <h2 id="contactTitle">Let's talk architecture.</h2>
+      <p class="contact-lead">Cloud, security or AI platform work in a regulated environment? I'm happy to compare notes.</p>
+      <a class="contact-mail" href="mailto:fawazdanny@gmail.com">fawazdanny@gmail.com</a>
+      <div class="contact-actions">
+        <a class="btn btn-primary" href="mailto:fawazdanny@gmail.com">Send an email</a>
+        <button class="btn" id="copyMail" type="button">Copy address</button>
+        <a class="btn" href="https://www.linkedin.com/in/darwish-fawaz/" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn" href="https://github.com/darwishfawaz" target="_blank" rel="noopener">GitHub</a>
+      </div>
     </div>
+  </section>
 
-</header>
-
-
-
-<!-- =========================================================
-     MAIN CONTENT
-     ========================================================= -->
-
-<main>
-
-
-<!-- =========================================================
-     ARCHITECTURE
-     ========================================================= -->
-
-<section id="architecture">
-
-    <div class="section-label">
-        01 / Architecture
+  <footer class="footer">
+    <div class="wrap">
+      <span>&copy; <span id="year">2026</span> Darwish Fawaz</span>
+      <span>London, UK</span>
     </div>
-
-    <h2>
-        Architecture without the silos.
-    </h2>
-
-    <p class="section-intro">
-
-        I work across the boundaries between infrastructure,
-        cloud, cybersecurity and AI — turning complex enterprise
-        requirements into secure, automated and operationally
-        practical architectures.
-
-    </p>
-
-
-    <div class="statement">
-
-        <strong>
-            Architecture → Engineering → Security → Automation
-        </strong>
-
-        <p>
-
-            From strategy and high-level design through
-            implementation, security controls, automation
-            and operational handover.
-
-        </p>
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================================================
-     CAPABILITIES
-     ========================================================= -->
-
-<section id="capabilities">
-
-    <div class="section-label">
-        02 / Capabilities
-    </div>
-
-    <h2>
-        What I architect.
-    </h2>
-
-    <p class="section-intro">
-
-        Enterprise technology architecture spanning cloud,
-        security, identity, AI, infrastructure and automation.
-
-    </p>
-
-
-    <div class="grid">
-
-
-        <div class="card">
-
-            <div class="card-number">
-                01
-            </div>
-
-            <h3>
-                ☁ Cloud Architecture
-            </h3>
-
-            <p>
-
-                Secure cloud platforms, landing zones,
-                hybrid infrastructure, networking,
-                governance and migration architectures.
-
-            </p>
-
-            <div class="tags">
-
-                <span class="tag">Azure</span>
-                <span class="tag">AWS</span>
-                <span class="tag">Terraform</span>
-                <span class="tag">Landing Zones</span>
-
-            </div>
-
-        </div>
-
-
-
-        <div class="card">
-
-            <div class="card-number">
-                02
-            </div>
-
-            <h3>
-                🛡 Security Architecture
-            </h3>
-
-            <p>
-
-                Zero Trust, identity, privileged access,
-                security controls, threat modelling and
-                secure-by-design architecture.
-
-            </p>
-
-            <div class="tags">
-
-                <span class="tag">Zero Trust</span>
-                <span class="tag">Entra ID</span>
-                <span class="tag">PIM</span>
-                <span class="tag">DSPM</span>
-
-            </div>
-
-        </div>
-
-
-
-        <div class="card">
-
-            <div class="card-number">
-                03
-            </div>
-
-            <h3>
-                🤖 AI Architecture
-            </h3>
-
-            <p>
-
-                Secure AI platforms, agents, AI governance,
-                data protection, guardrails and enterprise
-                AI adoption.
-
-            </p>
-
-            <div class="tags">
-
-                <span class="tag">Azure AI</span>
-                <span class="tag">AI Foundry</span>
-                <span class="tag">Agents</span>
-                <span class="tag">AI Security</span>
-
-            </div>
-
-        </div>
-
-
-
-        <div class="card">
-
-            <div class="card-number">
-                04
-            </div>
-
-            <h3>
-                ⚙ Automation
-            </h3>
-
-            <p>
-
-                Infrastructure as Code and automated
-                delivery pipelines that make platforms
-                repeatable and auditable.
-
-            </p>
-
-            <div class="tags">
-
-                <span class="tag">Terraform</span>
-                <span class="tag">Python</span>
-                <span class="tag">PowerShell</span>
-                <span class="tag">GitHub</span>
-
-            </div>
-
-        </div>
-
-
-
-        <div class="card">
-
-            <div class="card-number">
-                05
-            </div>
-
-            <h3>
-                🔐 Identity &amp; Zero Trust
-            </h3>
-
-            <p>
-
-                Identity-first security covering workforce
-                identities, privileged access, devices and
-                continuous access controls.
-
-            </p>
-
-            <div class="tags">
-
-                <span class="tag">Entra ID</span>
-                <span class="tag">PIM</span>
-                <span class="tag">FIDO2</span>
-                <span class="tag">Intune</span>
-
-            </div>
-
-        </div>
-
-
-
-        <div class="card">
-
-            <div class="card-number">
-                06
-            </div>
-
-            <h3>
-                🏗 Infrastructure
-            </h3>
-
-            <p>
-
-                Enterprise infrastructure spanning
-                networking, virtualisation, Windows,
-                storage and hybrid platforms.
-
-            </p>
-
-            <div class="tags">
-
-                <span class="tag">VMware</span>
-                <span class="tag">Cisco</span>
-                <span class="tag">Windows</span>
-                <span class="tag">Linux</span>
-
-            </div>
-
-        </div>
-
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================================================
-     SELECTED WORK
-     ========================================================= -->
-
-<section id="work">
-
-    <div class="section-label">
-        03 / Selected Work
-    </div>
-
-    <h2>
-        Architecture in practice.
-    </h2>
-
-
-    <div class="projects">
-
-
-        <div class="project">
-
-            <div class="project-label">
-                CLOUD • AI • SECURITY
-            </div>
-
-            <h3>
-                Secure AI Platform
-            </h3>
-
-            <p>
-
-                Secure AI platform architecture covering
-                AI workloads, data ingestion, private
-                connectivity, identity, governance,
-                security controls and enterprise guardrails.
-
-            </p>
-
-            <div class="tags">
-
-                <span class="tag">Azure AI Foundry</span>
-                <span class="tag">Databricks</span>
-                <span class="tag">Cosmos DB</span>
-                <span class="tag">Purview</span>
-
-            </div>
-
-        </div>
-
-
-
-        <div class="project">
-
-            <div class="project-label">
-                PLATFORM ENGINEERING
-            </div>
-
-            <h3>
-                Enterprise Container Platform
-            </h3>
-
-            <p>
-
-                Container platform architecture with
-                automated deployment, container registries,
-                CI/CD and isolated customer data paths.
-
-            </p>
-
-            <div class="tags">
-
-                <span class="tag">AKS</span>
-                <span class="tag">Azure SQL</span>
-                <span class="tag">ACR</span>
-                <span class="tag">Azure DevOps</span>
-
-            </div>
-
-        </div>
-
-
-
-        <div class="project">
-
-            <div class="project-label">
-                ZERO TRUST • IAM
-            </div>
-
-            <h3>
-                Identity Security Transformation
-            </h3>
-
-            <p>
-
-                Identity-first security controls using
-                Conditional Access, Privileged Identity
-                Management and phishing-resistant
-                authentication.
-
-            </p>
-
-            <div class="tags">
-
-                <span class="tag">Entra ID</span>
-                <span class="tag">PIM</span>
-                <span class="tag">FIDO2</span>
-                <span class="tag">ZPA</span>
-
-            </div>
-
-        </div>
-
-
-
-        <div class="project">
-
-            <div class="project-label">
-                IaC • AUTOMATION
-            </div>
-
-            <h3>
-                Infrastructure Automation
-            </h3>
-
-            <p>
-
-                Infrastructure automation patterns using
-                Terraform, PowerShell and CI/CD pipelines
-                to make cloud platforms repeatable,
-                governed and auditable.
-
-            </p>
-
-            <div class="tags">
-
-                <span class="tag">Terraform</span>
-                <span class="tag">PowerShell</span>
-                <span class="tag">Python</span>
-                <span class="tag">GitHub</span>
-
-            </div>
-
-        </div>
-
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================================================
-     PRINCIPLES
-     ========================================================= -->
-
-<section>
-
-    <div class="section-label">
-        04 / Principles
-    </div>
-
-    <h2>
-        How I approach architecture.
-    </h2>
-
-
-    <div class="principles">
-
-
-        <div class="principle">
-
-            <span>01</span>
-
-            <h3>
-                Secure by design
-            </h3>
-
-            <p>
-                Security controls belong in the architecture,
-                rather than being added after deployment.
-            </p>
-
-        </div>
-
-
-        <div class="principle">
-
-            <span>02</span>
-
-            <h3>
-                Automate the repeatable
-            </h3>
-
-            <p>
-                Infrastructure should be reproducible,
-                version-controlled and deployable through code.
-            </p>
-
-        </div>
-
-
-        <div class="principle">
-
-            <span>03</span>
-
-            <h3>
-                Identity is the control plane
-            </h3>
-
-            <p>
-                Modern enterprise security starts with identity,
-                privilege, device trust and continuous evaluation.
-            </p>
-
-        </div>
-
-
-        <div class="principle">
-
-            <span>04</span>
-
-            <h3>
-                Architecture must ship
-            </h3>
-
-            <p>
-                Architecture has to survive implementation,
-                operations, budgets and real-world constraints.
-            </p>
-
-        </div>
-
-
-        <div class="principle">
-
-            <span>05</span>
-
-            <h3>
-                AI with guardrails
-            </h3>
-
-            <p>
-                AI adoption needs governed data, controlled
-                identities, security boundaries and observability.
-            </p>
-
-        </div>
-
-
-        <div class="principle">
-
-            <span>06</span>
-
-            <h3>
-                Evidence over slideware
-            </h3>
-
-            <p>
-                Architecture decisions should be validated
-                through PoCs, testing and measurable outcomes.
-            </p>
-
-        </div>
-
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================================================
-     TECHNOLOGY
-     ========================================================= -->
-
-<section id="technology">
-
-    <div class="section-label">
-        05 / Technology
-    </div>
-
-    <h2>
-        Technology landscape.
-    </h2>
-
-    <p class="section-intro">
-
-        A combination of enterprise architecture,
-        cloud engineering, cybersecurity and automation.
-
-    </p>
-
-
-    <div class="tags"
-         style="margin-top:35px;">
-
-        <span class="tag">Microsoft Azure</span>
-        <span class="tag">Azure AI Foundry</span>
-        <span class="tag">Microsoft Entra</span>
-        <span class="tag">Microsoft Intune</span>
-        <span class="tag">Microsoft Defender</span>
-        <span class="tag">Microsoft Purview</span>
-        <span class="tag">AKS</span>
-        <span class="tag">Azure SQL</span>
-        <span class="tag">Databricks</span>
-        <span class="tag">Terraform</span>
-        <span class="tag">Azure DevOps</span>
-        <span class="tag">GitHub</span>
-        <span class="tag">Python</span>
-        <span class="tag">PowerShell</span>
-        <span class="tag">VMware</span>
-        <span class="tag">Cisco</span>
-        <span class="tag">Windows</span>
-        <span class="tag">Linux</span>
-        <span class="tag">Zero Trust</span>
-        <span class="tag">IAM</span>
-        <span class="tag">AI Security</span>
-
-    </div>
-
-</section>
-
-
-</main>
-
-
-
-<!-- =========================================================
-     FOOTER
-     ========================================================= -->
-
-<footer id="contact">
-
-    <div class="footer-inner">
-
-        <h2>
-            Let's architect what comes next.
-        </h2>
-
-        <p>
-            Cloud · Security · AI · Automation
-        </p>
-
-
-        <div class="footer-links">
-
-            <!-- CHANGE EMAIL -->
-
-            <a href="mailto:YOUR_EMAIL">
-                Email
-            </a>
-
-            <a href="https://www.linkedin.com/">
-                LinkedIn
-            </a>
-
-            <a href="https://github.com/darwishfawaz">
-                GitHub
-            </a>
-
-        </div>
-
-
-        <div class="copyright">
-
-            © 2026 Darwish Fawaz · Infrastructure &amp;
-            Security Architecture
-
-        </div>
-
-    </div>
-
-</footer>
-
-
+  </footer>
+
+  <script>
+  (function () {
+    "use strict";
+
+    /* =====================================================================
+       1. SETTINGS YOU MAY WANT TO EDIT
+       ===================================================================== */
+    var LINKEDIN_URL = "https://www.linkedin.com/in/darwish-fawaz/";
+
+    // Option A (automatic): paste an RSS/Atom feed URL of your LinkedIn posts here.
+    // Create one with a free feed generator such as rss.app or FetchRSS (see README).
+    var FEED_URL = "";
+
+    // Option B (manual): add your own posts here. Newest first. Only https links are used.
+    // Example:
+    // { title: "Why identity is the control plane", date: "2026-09-01",
+    //   url: "https://www.linkedin.com/posts/...", excerpt: "One or two lines from the post." }
+    var POSTS = [];
+
+    var MAX_POSTS = 3;
+
+    /* =====================================================================
+       2. HERO ARCHITECTURE DIAGRAM
+       ===================================================================== */
+    var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    var NS = "http://www.w3.org/2000/svg";
+    var svg = document.getElementById("arch");
+    var capTitle = document.getElementById("diaTitle");
+    var capText = document.getElementById("diaText");
+
+    var HUB = {
+      label: "Identity", sub: "Zero Trust",
+      title: "Identity is the control plane",
+      text: "Entra ID Conditional Access, PIM and Intune device compliance replaced legacy VPN with Zscaler Private Access, so access follows identity and context rather than network location."
+    };
+    var SPOKES = [
+      { label: "Landing zones", title: "Azure landing zones",
+        text: "Cloud Adoption Framework landing zones across 6+ environments, with policy guardrails that cut environment provisioning time by over 60%." },
+      { label: "Networking", title: "Hub-spoke networking",
+        text: "Hub-spoke topology with Azure Firewall, Application Gateway, WAF, Front Door and Private Endpoints, connected to datacentres and partner networks." },
+      { label: "Sentinel SOC", title: "AI-driven security operations",
+        text: "Microsoft Sentinel SIEM and SOAR with Defender XDR and Copilot for Security. Automated playbooks reduced mean time to respond." },
+      { label: "DevSecOps", title: "Infrastructure as code",
+        text: "Terraform and Azure DevOps as the enterprise standard, with approval gates, policy validation and Fortify SAST and DAST." },
+      { label: "AI platform", title: "AI and data landing zone",
+        text: "A secure foundation for Microsoft Foundry using Data Factory, Databricks and Cosmos DB behind private endpoints, with CSPM controls." },
+      { label: "FinOps", title: "Cost optimisation",
+        text: "About 30% off annual Azure spend through Reserved Instances, Savings Plans, autoscaling, storage lifecycle policies and Sentinel ingestion tuning." }
+    ];
+
+    function el(name, attrs, parent) {
+      var e = document.createElementNS(NS, name);
+      for (var k in attrs) { if (Object.prototype.hasOwnProperty.call(attrs, k)) e.setAttribute(k, attrs[k]); }
+      if (parent) parent.appendChild(e);
+      return e;
+    }
+
+    if (svg) {
+      var CX = 280, CY = 280, R = 200;
+      var items = [];   // { data, node, link }
+
+      el("circle", { "class": "dia-ring dia-ring--outer", cx: CX, cy: CY, r: 252 }, svg);
+      el("circle", { "class": "dia-ring", cx: CX, cy: CY, r: R }, svg);
+
+      var linkLayer = el("g", {}, svg);
+      var packetLayer = el("g", {}, svg);
+
+      // Spokes
+      var spokeNodes = [];
+      SPOKES.forEach(function (s, i) {
+        var a = (-90 + i * 60) * Math.PI / 180;
+        var x = Math.round(CX + R * Math.cos(a));
+        var y = Math.round(CY + R * Math.sin(a));
+        var link = el("line", { "class": "dia-link", x1: CX, y1: CY, x2: x, y2: y }, linkLayer);
+
+        if (!reduceMotion) {
+          var inward = i % 2 === 1;
+          var path = inward ? "M" + x + "," + y + " L" + CX + "," + CY : "M" + CX + "," + CY + " L" + x + "," + y;
+          var dot = el("circle", { "class": "dia-packet", r: 4.5, cx: 0, cy: 0 }, packetLayer);
+          el("animateMotion", {
+            dur: (3.2 + (i % 3) * 0.7).toFixed(1) + "s",
+            begin: (i * 0.55).toFixed(2) + "s",
+            repeatCount: "indefinite",
+            path: path
+          }, dot);
+        }
+        spokeNodes.push({ data: s, x: x, y: y, link: link });
+      });
+
+      // Hub
+      var hubG = el("g", { "class": "dia-node dia-node--hub", tabindex: "0", role: "button", "aria-label": HUB.title }, svg);
+      el("circle", { "class": "dia-halo", cx: CX, cy: CY, r: 72 }, hubG);
+      el("circle", { "class": "dia-hub", cx: CX, cy: CY, r: 66 }, hubG);
+      var hubT = el("text", { x: CX, y: CY - 3, "text-anchor": "middle", style: "font-size:23px;font-weight:700" }, hubG);
+      hubT.textContent = HUB.label;
+      var hubS = el("text", { "class": "dia-hub-sub", x: CX, y: CY + 20, "text-anchor": "middle" }, hubG);
+      hubS.textContent = HUB.sub;
+      items.push({ data: HUB, node: hubG, link: null });
+
+      // Spoke pills (drawn last so they sit on top of the links)
+      spokeNodes.forEach(function (s) {
+        var w = Math.round(s.data.label.length * 9.6 + 36);
+        var g = el("g", { "class": "dia-node", transform: "translate(" + s.x + "," + s.y + ")", tabindex: "0", role: "button", "aria-label": s.data.title }, svg);
+        el("rect", { x: -w / 2, y: -21, width: w, height: 42, rx: 21 }, g);
+        var t = el("text", { x: 0, y: 6, "text-anchor": "middle" }, g);
+        t.textContent = s.data.label;
+        items.push({ data: s.data, node: g, link: s.link });
+      });
+
+      var current = -1;
+      function activate(i) {
+        if (i === current) return;
+        current = i;
+        items.forEach(function (it, idx) {
+          var on = idx === i;
+          it.node.classList.toggle("is-active", on);
+          if (it.link) it.link.classList.toggle("is-active", on);
+        });
+        capTitle.textContent = items[i].data.title;
+        capText.textContent = items[i].data.text;
+      }
+
+      var timer = null;
+      function stopAuto() { if (timer) { clearInterval(timer); timer = null; } }
+      function userPick(i) { stopAuto(); activate(i); }
+
+      items.forEach(function (it, idx) {
+        it.node.addEventListener("mouseenter", function () { userPick(idx); });
+        it.node.addEventListener("focus", function () { userPick(idx); });
+        it.node.addEventListener("click", function () { userPick(idx); });
+        it.node.addEventListener("keydown", function (e) {
+          if (e.key === "Enter" || e.key === " ") { e.preventDefault(); userPick(idx); }
+        });
+      });
+
+      activate(0);
+      if (!reduceMotion) {
+        var n = 0;
+        timer = setInterval(function () { n = (n + 1) % items.length; activate(n); }, 5200);
+      }
+    }
+
+    /* =====================================================================
+       3. LATEST FROM LINKEDIN
+       ===================================================================== */
+    var postsEl = document.getElementById("posts");
+
+    function isHttps(u) { return typeof u === "string" && /^https:\/\//i.test(u); }
+
+    function plain(html) {
+      var doc = new DOMParser().parseFromString(String(html || ""), "text/html");
+      return (doc.body.textContent || "").replace(/\s+/g, " ").trim();
+    }
+
+    function fmtDate(v) {
+      if (!v) return "";
+      var s = String(v);
+      if (/^\d{4}-\d{2}-\d{2} \d/.test(s)) s = s.replace(" ", "T") + "Z";
+      var d = new Date(s);
+      if (isNaN(d)) return "";
+      return new Intl.DateTimeFormat("en-GB", { day: "numeric", month: "short", year: "numeric" }).format(d);
+    }
+
+    function clip(s, n) { return s.length > n ? s.slice(0, n - 1).trim() + "\u2026" : s; }
+
+    function renderEmpty() {
+      postsEl.textContent = "";
+      var box = document.createElement("div");
+      box.className = "posts-empty";
+      var p = document.createElement("p");
+      p.textContent = "My latest posts on cloud security, Zero Trust and AI platforms are on LinkedIn.";
+      var a = document.createElement("a");
+      a.className = "btn btn-primary";
+      a.href = LINKEDIN_URL;
+      a.target = "_blank";
+      a.rel = "noopener";
+      a.textContent = "Read my latest posts";
+      box.appendChild(p);
+      box.appendChild(a);
+      postsEl.appendChild(box);
+    }
+
+    function renderPosts(list) {
+      var valid = list.filter(function (p) { return p && p.title && isHttps(p.url); }).slice(0, MAX_POSTS);
+      if (!valid.length) { renderEmpty(); return; }
+      postsEl.textContent = "";
+      valid.forEach(function (p) {
+        var a = document.createElement("a");
+        a.className = "post";
+        a.href = p.url;
+        a.target = "_blank";
+        a.rel = "noopener";
+
+        var meta = document.createElement("div");
+        meta.className = "post-meta";
+        meta.innerHTML = '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>';
+        var d = document.createElement("span");
+        d.textContent = ["LinkedIn", fmtDate(p.date)].filter(Boolean).join(", ");
+        meta.appendChild(d);
+
+        var h = document.createElement("span");
+        h.className = "post-title";
+        h.textContent = clip(plain(p.title), 140);
+
+        a.appendChild(meta);
+        a.appendChild(h);
+
+        if (p.excerpt) {
+          var ex = document.createElement("span");
+          ex.className = "post-excerpt";
+          ex.textContent = clip(plain(p.excerpt), 220);
+          a.appendChild(ex);
+        }
+        var cta = document.createElement("span");
+        cta.className = "post-cta";
+        cta.textContent = "Read on LinkedIn";
+        a.appendChild(cta);
+        postsEl.appendChild(a);
+      });
+    }
+
+    function loadPosts() {
+      if (!FEED_URL) { renderPosts(POSTS); return; }
+      var api = "https://api.rss2json.com/v1/api.json?rss_url=" + encodeURIComponent(FEED_URL);
+      fetch(api)
+        .then(function (r) { return r.json(); })
+        .then(function (data) {
+          if (data && data.status === "ok" && data.items && data.items.length) {
+            renderPosts(data.items.map(function (i) {
+              return { title: i.title, date: i.pubDate, url: i.link, excerpt: i.description };
+            }));
+          } else { renderPosts(POSTS); }
+        })
+        .catch(function () { renderPosts(POSTS); });
+    }
+    if (postsEl) loadPosts();
+
+    /* =====================================================================
+       4. THEME TOGGLE, COPY EMAIL, FOOTER YEAR
+       ===================================================================== */
+    var root = document.documentElement;
+    var toggle = document.getElementById("themeToggle");
+    if (toggle) {
+      toggle.addEventListener("click", function () {
+        var explicit = root.getAttribute("data-theme");
+        var systemDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        var isDark = explicit ? explicit === "dark" : systemDark;
+        var next = isDark ? "light" : "dark";
+        root.setAttribute("data-theme", next);
+        try { localStorage.setItem("theme", next); } catch (e) {}
+      });
+    }
+
+    var copyBtn = document.getElementById("copyMail");
+    if (copyBtn) {
+      copyBtn.addEventListener("click", function () {
+        var done = function (msg) {
+          copyBtn.textContent = msg;
+          setTimeout(function () { copyBtn.textContent = "Copy address"; }, 2000);
+        };
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText("fawazdanny@gmail.com").then(function () { done("Copied"); }, function () { done("Copy failed"); });
+        } else { done("Copy failed"); }
+      });
+    }
+
+    var y = document.getElementById("year");
+    if (y) y.textContent = new Date().getFullYear();
+  })();
+  </script>
 </body>
 </html>
