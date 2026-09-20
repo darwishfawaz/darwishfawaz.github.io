@@ -2,12 +2,12 @@
 # Front matter required for Jekyll Sass compilation
 ---
 
-// Color Palette Definition (Sky Blue & Deep Ocean Theme)
-$sky-blue: #7DD3FC;      // Light Accent / Highlights
-$deep-ocean: #082F49;    // Primary Brand Background
-$deep-ocean-card: #0c3d5e; // Slightly lighter ocean for contrast cards
-$text-light: #F0F9FF;    // Light text color
-$text-muted: #BAE6FD;    // Secondary text color
+// Color Palette (Sky Blue & Deep Ocean Theme)
+$sky-blue: #7DD3FC;        // Light Accent / Highlights
+$deep-ocean: #082F49;      // Primary Brand Background
+$deep-ocean-card: #0c3d5e; // Secondary dark ocean for card backgrounds
+$text-light: #F0F9FF;      // Light main text
+$text-muted: #BAE6FD;      // Secondary subtext
 
 * {
   box-sizing: border-box;
@@ -40,24 +40,24 @@ a {
   transition: all 0.3s ease;
 }
 
-/* Buttons & Badges */
+/* Badges & Buttons */
 .badge {
   display: inline-block;
   background-color: rgba($sky-blue, 0.15);
   color: $sky-blue;
-  padding: 6px 14px;
+  padding: 6px 16px;
   border-radius: 20px;
   font-size: 0.85rem;
   font-weight: 600;
   border: 1px solid rgba($sky-blue, 0.3);
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
 .btn-primary {
   display: inline-block;
   background-color: $sky-blue;
   color: $deep-ocean;
-  padding: 10px 22px;
+  padding: 12px 24px;
   border-radius: 6px;
   font-weight: 600;
   border: 1px solid $sky-blue;
@@ -71,7 +71,7 @@ a {
   display: inline-block;
   background-color: transparent;
   color: $sky-blue;
-  padding: 10px 22px;
+  padding: 12px 24px;
   border-radius: 6px;
   font-weight: 600;
   border: 1px solid $sky-blue;
@@ -82,7 +82,7 @@ a {
 
 /* Navbar */
 .navbar {
-  padding: 20px 0;
+  padding: 22px 0;
   border-bottom: 1px solid rgba($sky-blue, 0.1);
   .nav-container {
     display: flex;
@@ -98,7 +98,7 @@ a {
   .nav-links {
     display: flex;
     list-style: none;
-    gap: 20px;
+    gap: 24px;
     align-items: center;
     a {
       color: $text-muted;
@@ -110,17 +110,20 @@ a {
 
 /* Hero Section */
 .hero {
-  padding: 100px 0;
+  padding: 110px 0 90px;
   text-align: center;
   h1 {
-    font-size: 3rem;
+    font-size: 3.2rem;
+    line-height: 1.2;
     letter-spacing: -0.5px;
+    max-width: 900px;
+    margin: 0 auto 20px;
   }
   .subtitle {
-    font-size: 1.2rem;
+    font-size: 1.25rem;
     color: $text-muted;
-    max-width: 700px;
-    margin: 0 auto 30px;
+    max-width: 750px;
+    margin: 0 auto 35px;
   }
   .cta-group {
     display: flex;
@@ -129,27 +132,27 @@ a {
   }
 }
 
-/* Layout Sections */
+/* Section Layouts */
 .section {
   padding: 80px 0;
 }
 
 .bg-alt {
-  background-color: darken($deep-ocean, 2%);
+  background-color: darken($deep-ocean, 2.5%);
 }
 
 .section-title {
-  font-size: 2rem;
+  font-size: 2.2rem;
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   position: relative;
   &::after {
     content: '';
     display: block;
-    width: 50px;
+    width: 60px;
     height: 3px;
     background-color: $sky-blue;
-    margin: 10px auto 0;
+    margin: 12px auto 0;
     border-radius: 2px;
   }
 }
@@ -157,32 +160,35 @@ a {
 .lead-text {
   text-align: center;
   max-width: 800px;
-  margin: 0 auto 40px;
+  margin: 0 auto 50px;
   font-size: 1.1rem;
   color: $text-muted;
 }
 
-/* Highlight Cards */
+/* Grid Components */
 .highlights-grid, .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 25px;
 }
 
 .highlight-card, .project-card {
   background-color: $deep-ocean-card;
-  padding: 30px;
+  padding: 32px;
   border-radius: 8px;
-  border: 1px solid rgba($sky-blue, 0.1);
-  transition: transform 0.3s ease;
+  border: 1px solid rgba($sky-blue, 0.12);
+  transition: transform 0.3s ease, border-color 0.3s ease;
   &:hover {
     transform: translateY(-5px);
-    border-color: rgba($sky-blue, 0.4);
+    border-color: rgba($sky-blue, 0.5);
   }
   i {
-    font-size: 2rem;
+    font-size: 2.2rem;
     color: $sky-blue;
-    margin-bottom: 15px;
+    margin-bottom: 18px;
+  }
+  h3 {
+    font-size: 1.25rem;
   }
   p {
     color: $text-muted;
@@ -190,58 +196,23 @@ a {
   }
 }
 
-/* Skills Tags */
+/* Skills Spectrum */
 .skills-grid {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
   justify-content: center;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .skill-tag {
   background-color: $deep-ocean-card;
   color: $sky-blue;
-  border: 1px solid rgba($sky-blue, 0.2);
-  padding: 8px 18px;
-  border-radius: 20px;
-  font-size: 0.9rem;
-}
-
-/* Timeline */
-.timeline {
-  max-width: 800px;
-  margin: 0 auto;
-  border-left: 2px solid $sky-blue;
-  padding-left: 25px;
-  .timeline-item {
-    margin-bottom: 30px;
-    position: relative;
-    &::before {
-      content: '';
-      position: absolute;
-      left: -32px;
-      top: 5px;
-      width: 12px;
-      height: 12px;
-      border-radius: 50%;
-      background-color: $sky-blue;
-    }
-    .timeline-date {
-      font-size: 0.85rem;
-      color: $sky-blue;
-      font-weight: 600;
-    }
-    h4 {
-      color: $text-muted;
-      font-size: 1rem;
-      font-weight: 400;
-      margin-bottom: 10px;
-    }
-    p {
-      color: $text-muted;
-      font-size: 0.95rem;
-    }
-  }
+  border: 1px solid rgba($sky-blue, 0.25);
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-size: 0.92rem;
 }
 
 /* Contact & Footer */
@@ -249,7 +220,9 @@ a {
   text-align: center;
   p {
     color: $text-muted;
-    margin-bottom: 25px;
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto 30px;
   }
   .contact-links {
     display: flex;
@@ -266,7 +239,7 @@ footer {
   font-size: 0.85rem;
 }
 
-/* Mobile Responsiveness */
+/* Responsive adjustments */
 @media (max-width: 768px) {
   .hero h1 { font-size: 2.2rem; }
   .navbar .nav-links { display: none; }
