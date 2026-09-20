@@ -1,683 +1,151 @@
+---
+layout: null
+---
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
-  <meta charset="UTF-8">
-
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1.0">
-
-  <meta name="description"
-        content="Darwish Fawaz — Infrastructure & Security Architect specialising in secure cloud, hybrid infrastructure, identity, security architecture and compliance.">
-
-  <title>Darwish Fawaz | Infrastructure & Security Architect</title>
-
-  <!-- Jekyll compiles style.scss into style.css -->
-  <link rel="stylesheet"
-        href="{{ '/assets/css/style.css' | relative_url }}">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Darwish Fawaz - Infrastructure & Security Architect specializing in secure cloud, hybrid infrastructure, identity, security architecture and compliance.">
+    <title>Darwish Fawaz | Infrastructure & Security Architect</title>
+    <!-- Jekyll compiles style.scss into style.css -->
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-
-
 <body>
 
-  <!-- =========================
-       HEADER
-  ========================== -->
-
-  <header class="site-header">
-
-    <div class="container nav">
-
-      <a class="brand" href="#home">
-
-        <span class="brand-mark">DF</span>
-
-        <span>Darwish Fawaz</span>
-
-      </a>
-
-
-      <nav aria-label="Main navigation">
-
-        <a class="active" href="#home">
-          Home
-        </a>
-
-        <a href="#architecture">
-          Architecture
-        </a>
-
-        <a href="#security">
-          Security
-        </a>
-
-        <a href="#compliance">
-          Compliance
-        </a>
-
-        <a href="#work">
-          Work
-        </a>
-
-        <a href="#contact">
-          Contact
-        </a>
-
-      </nav>
-
-    </div>
-
-  </header>
-
-
-  <main>
-
-
-    <!-- =========================
-         HERO
-    ========================== -->
-
-    <section id="home" class="hero">
-
-      <div class="container hero-grid">
-
-
-        <div class="hero-copy">
-
-          <p class="eyebrow">
-            INFRASTRUCTURE &amp; SECURITY ARCHITECT
-          </p>
-
-
-          <h1>
-            Secure Infrastructure.<br>
-            Resilient Organisations.<br>
-            <span>Built for What's Next.</span>
-          </h1>
-
-
-          <p class="hero-text">
-            I design secure, resilient and compliant infrastructure
-            and security architectures that enable organisations to
-            modernise, reduce risk and meet their regulatory obligations.
-          </p>
-
-
-          <div class="actions">
-
-            <a class="button button-primary"
-               href="#contact">
-
-              Get in touch
-              <span>→</span>
-
-            </a>
-
-
-            <a class="button button-secondary"
-               href="#work">
-
-              View my work
-
-            </a>
-
-          </div>
-
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">DF<span>.</span></a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#contact" class="btn-primary">Contact</a></li>
+                </ul>
+            </nav>
         </div>
+    </header>
 
-
-        <!-- HERO VISUAL -->
-
-        <div class="hero-visual">
-
-          <div class="hero-shape">
-
-            <div class="hero-image"></div>
-
-            <div class="hero-cut"></div>
-
-          </div>
-
-
-          <div class="hero-labels">
-
-            <span>CLOUD</span>
-            <span>SECURITY</span>
-            <span>ARCHITECTURE</span>
-            <span>COMPLIANCE</span>
-            <span>RESILIENCE</span>
-
-          </div>
-
+    <section class="hero">
+        <div class="container hero-content">
+            <span class="badge">Cloud & Cybersecurity Architect</span>
+            <h1>Darwish Fawaz</h1>
+            <p class="subtitle">Architecting enterprise-scale Zero Trust, Azure Landing Zones, DevSecOps, and Sentinel SIEM/SOAR platforms for regulated environments.</p>
+            <div class="cta-group">
+                <a href="#projects" class="btn-primary">View Key Projects</a>
+                <a href="https://linkedin.com" target="_blank" rel="noopener" class="btn-secondary"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                <a href="https://github.com/darwishfawaz" target="_blank" rel="noopener" class="btn-secondary"><i class="fab fa-github"></i> GitHub</a>
+            </div>
         </div>
-
-      </div>
-
     </section>
 
-
-
-    <!-- =========================
-         ARCHITECTURE
-    ========================== -->
-
-    <section id="architecture"
-             class="section architecture">
-
-      <div class="container architecture-grid">
-
-
-        <div class="architecture-intro">
-
-          <p class="eyebrow">
-            ARCHITECTURE FOCUS
-          </p>
-
-
-          <h2>
-            End-to-end architecture for secure,
-            modern enterprises.
-          </h2>
-
-
-          <p class="section-intro">
-            I bridge infrastructure, security and governance
-            to build platforms that are scalable, resilient,
-            secure and compliant.
-          </p>
-
-        </div>
-
-
-        <div class="capability-grid">
-
-
-          <div class="capability">
-
-            <div class="icon">⌁</div>
-
-            <h3>
-              Cloud &amp; Hybrid Infrastructure
-            </h3>
-
-          </div>
-
-
-          <div class="capability">
-
-            <div class="icon">◇</div>
-
-            <h3>
-              Security Architecture
-            </h3>
-
-          </div>
-
-
-          <div class="capability">
-
-            <div class="icon">◌</div>
-
-            <h3>
-              Identity &amp; Access
-            </h3>
-
-          </div>
-
-
-          <div class="capability">
-
-            <div class="icon">▱</div>
-
-            <h3>
-              Platform Engineering
-            </h3>
-
-          </div>
-
-
-          <div class="capability">
-
-            <div class="icon">⌘</div>
-
-            <h3>
-              Networking &amp; Connectivity
-            </h3>
-
-          </div>
-
-
-          <div class="capability">
-
-            <div class="icon">◫</div>
-
-            <h3>
-              Data Protection &amp; Governance
-            </h3>
-
-          </div>
-
-
-          <div class="capability">
-
-            <div class="icon">✓</div>
-
-            <h3>
-              Risk &amp; Compliance
-            </h3>
-
-            <p>
-              NIST · SOC 2 · ISO 27001
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <p class="lead-text">
+                Cloud Infrastructure & Security Architect with over 20 years of enterprise IT experience, specializing in Microsoft Azure and Microsoft 365 within regulated financial services environments.
             </p>
-
-          </div>
-
-
-          <div class="capability">
-
-            <div class="icon">⚙</div>
-
-            <h3>
-              Operations &amp; Resilience
-            </h3>
-
-          </div>
-
-
+            <div class="highlights-grid">
+                <div class="highlight-card">
+                    <i class="fas fa-shield-halved"></i>
+                    <h3>Zero Trust Architecture</h3>
+                    <p>Modernized access paradigms replacing legacy VPNs with Entra ID Conditional Access, Zscaler, and PIM.</p>
+                </div>
+                <div class="highlight-card">
+                    <i class="fas fa-coins"></i>
+                    <h3>FinOps Leadership</h3>
+                    <p>Architected FinOps-driven Azure programs delivering ~30% annual cloud spend reductions.</p>
+                </div>
+                <div class="highlight-card">
+                    <i class="fas fa-brain"></i>
+                    <h3>AI & Data Platforms</h3>
+                    <p>Designed secure AI Landing Zone architectures for Microsoft Foundry and scalable data pipelines.</p>
+                </div>
+            </div>
         </div>
-
-      </div>
-
     </section>
 
-
-
-    <!-- =========================
-         SECURITY
-    ========================== -->
-
-    <section id="security"
-             class="security-section">
-
-      <div class="container security-grid">
-
-
-        <div>
-
-          <p class="eyebrow eyebrow-light">
-            SECURITY ARCHITECTURE
-          </p>
-
-
-          <h2>
-            Security engineered
-            into the platform.
-          </h2>
-
+    <section id="skills" class="section bg-alt">
+        <div class="container">
+            <h2 class="section-title">Core Competencies</h2>
+            <div class="skills-grid">
+                <span class="skill-tag">Azure Landing Zones (CAF)</span>
+                <span class="skill-tag">Microsoft Sentinel / SIEM-SOAR</span>
+                <span class="skill-tag">Terraform / IaC</span>
+                <span class="skill-tag">Zero Trust & Entra ID</span>
+                <span class="skill-tag">Defender XDR</span>
+                <span class="skill-tag">Azure DevOps CI/CD</span>
+                <span class="skill-tag">Multi-Cloud (AWS & GCP)</span>
+                <span class="skill-tag">AI Landing Zones</span>
+                <span class="skill-tag">NIST / ISO 27001 / CIS</span>
+                <span class="skill-tag">FinOps Optimization</span>
+            </div>
         </div>
-
-
-        <div class="security-content">
-
-          <p>
-            Security is treated as an architectural property
-            rather than a collection of controls added after delivery.
-          </p>
-
-
-          <div class="security-list">
-
-            <span>Zero Trust</span>
-
-            <span>Identity &amp; Privilege</span>
-
-            <span>Cloud Security</span>
-
-            <span>Data Protection</span>
-
-            <span>Threat &amp; Risk</span>
-
-            <span>Resilience</span>
-
-          </div>
-
-        </div>
-
-      </div>
-
     </section>
 
-
-
-    <!-- =========================
-         COMPLIANCE
-    ========================== -->
-
-    <section id="compliance"
-             class="compliance-section">
-
-      <div class="container compliance-grid">
-
-
-        <div>
-
-          <p class="eyebrow eyebrow-aqua">
-            COMPLIANCE &amp; GOVERNANCE
-          </p>
-
-
-          <h2>
-            Turn compliance into a
-            <span>strategic advantage.</span>
-          </h2>
-
+    <section id="projects" class="section">
+        <div class="container">
+            <h2 class="section-title">Key Accomplishments</h2>
+            <div class="projects-grid">
+                <article class="project-card">
+                    <h3>Enterprise Azure Landing Zone</h3>
+                    <p>Architected highly available Azure CAF Landing Zones utilizing hub-spoke topology, Azure Policy guardrails, and automated provisioning, reducing deployment time by 60%.</p>
+                </article>
+                <article class="project-card">
+                    <h3>AI-Driven SOC & Sentinel SIEM</h3>
+                    <p>Established Microsoft Sentinel SIEM/SOAR integrated with Defender XDR and Copilot for Security, automating incident detection and lowering MTTR.</p>
+                </article>
+                <article class="project-card">
+                    <h3>Bank of England (IDOBI) Program</h3>
+                    <p>Key Cloud Architect for FSCS’s contribution to the BoE DOBI program, modernizing depositor compensation via secure electronic payment workflows in Azure.</p>
+                </article>
+                <article class="project-card">
+                    <h3>DevSecOps & Infrastructure as Code</h3>
+                    <p>Introduced Terraform and Azure DevOps CI/CD standard, incorporating SAST/DAST (Fortify) integration, state isolation, and policy-as-code validation.</p>
+                </article>
+            </div>
         </div>
-
-
-        <div class="compliance-copy">
-
-          <p>
-            I help organisations translate regulatory and compliance
-            requirements into practical technology controls — embedding
-            governance, security and evidence into the architecture
-            rather than treating them as an afterthought.
-          </p>
-
-
-          <p class="small-note">
-            The objective isn't simply to pass an audit. It is to establish
-            architecture, controls, ownership and evidence that make
-            security and compliance part of normal technology operations.
-          </p>
-
-        </div>
-
-
-        <div class="frameworks">
-
-          <span>✓ NIST CSF</span>
-
-          <span>✓ NIST 800-53</span>
-
-          <span>✓ ISO 27001</span>
-
-          <span>✓ SOC 2</span>
-
-          <span>✓ CIS Controls</span>
-
-          <span>✓ GDPR</span>
-
-          <span>✓ DORA</span>
-
-        </div>
-
-      </div>
-
     </section>
 
-
-
-    <!-- =========================
-         SELECTED WORK
-    ========================== -->
-
-    <section id="work"
-             class="section work-section">
-
-      <div class="container">
-
-
-        <div class="work-heading">
-
-
-          <div>
-
-            <p class="eyebrow">
-              SELECTED WORK
-            </p>
-
-
-            <h2>
-              Real-world solutions.<br>
-              Measurable outcomes.
-            </h2>
-
-          </div>
-
-
-          <p>
-            Architecture and delivery experience across cloud,
-            security and hybrid environments — helping organisations
-            strengthen security, improve resilience and modernise
-            their technology platforms.
-          </p>
-
+    <section id="experience" class="section bg-alt">
+        <div class="container">
+            <h2 class="section-title">Professional Journey</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">2017 – Present</div>
+                    <h3>Cloud Infrastructure & Cybersecurity Architect</h3>
+                    <h4>Financial Services Compensation Scheme (FSCS)</h4>
+                    <p>Lead architect for Azure and M365 platforms in a regulated UK financial services environment. Primary technical authority across Architecture Review Boards (CAB/TDA).</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2005 – 2017</div>
+                    <h3>IT Technical Manager</h3>
+                    <h4>SkyNet Worldwide Express</h4>
+                    <p>Managed global network, server, and security infrastructure. Led retail automation projects for clients like ASOS and Next, and drove paperless shipping integrations.</p>
+                </div>
+            </div>
         </div>
-
-
-        <div class="work-grid">
-
-
-          <article class="work-card">
-
-            <p class="card-label">
-              CLOUD &amp; SECURITY
-            </p>
-
-            <h3>
-              Secure Cloud Platform
-            </h3>
-
-            <p>
-              Designed secure landing zones with network segmentation,
-              identity, monitoring and governance.
-            </p>
-
-          </article>
-
-
-          <article class="work-card">
-
-            <p class="card-label">
-              IDENTITY &amp; ZERO TRUST
-            </p>
-
-            <h3>
-              Identity Transformation
-            </h3>
-
-            <p>
-              Implemented Entra ID, Conditional Access and PIM
-              to strengthen identity and privileged access controls.
-            </p>
-
-          </article>
-
-
-          <article class="work-card">
-
-            <p class="card-label">
-              COMPLIANCE
-            </p>
-
-            <h3>
-              Regulatory Readiness
-            </h3>
-
-            <p>
-              Built architecture and controls supporting NIST,
-              SOC 2 and ISO 27001 alignment and audit evidence.
-            </p>
-
-          </article>
-
-
-          <article class="work-card">
-
-            <p class="card-label">
-              AUTOMATION &amp; IaC
-            </p>
-
-            <h3>
-              Infrastructure as Code
-            </h3>
-
-            <p>
-              Established Terraform and CI/CD practices for
-              consistent, secure and repeatable deployments.
-            </p>
-
-          </article>
-
-
-        </div>
-
-      </div>
-
     </section>
 
-
-
-    <!-- =========================
-         TECHNOLOGY
-    ========================== -->
-
-    <section class="technology-section">
-
-      <div class="container technology-grid">
-
-
-        <div>
-
-          <p class="eyebrow">
-            TECHNOLOGY
-          </p>
-
-
-          <h2>
-            Modern platforms.<br>
-            Trusted technologies.
-          </h2>
-
+    <section id="contact" class="section">
+        <div class="container contact-container">
+            <h2 class="section-title">Let's Connect</h2>
+            <p>Based in London, UK. Open to discussing cloud architecture, security governance, and enterprise transformation.</p>
+            <div class="contact-links">
+                <a href="mailto:fawazdanny@gmail.com" class="btn-primary"><i class="fas fa-envelope"></i> Email Me</a>
+                <a href="https://linkedin.com" target="_blank" rel="noopener" class="btn-secondary"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            </div>
         </div>
-
-
-        <div class="technology-list">
-
-          <span>Azure</span>
-
-          <span>Azure AI</span>
-
-          <span>AKS</span>
-
-          <span>Entra ID</span>
-
-          <span>Intune</span>
-
-          <span>Defender</span>
-
-          <span>Purview</span>
-
-          <span>Azure SQL</span>
-
-          <span>Databricks</span>
-
-          <span>Terraform</span>
-
-          <span>GitHub</span>
-
-          <span>Azure DevOps</span>
-
-          <span>VMware</span>
-
-          <span>Cisco</span>
-
-          <span>Windows</span>
-
-          <span>Linux</span>
-
-          <span>PowerShell</span>
-
-        </div>
-
-      </div>
-
     </section>
 
-
-
-    <!-- =========================
-         CONTACT
-    ========================== -->
-
-    <section id="contact"
-             class="contact-section">
-
-      <div class="container contact-grid">
-
-
-        <div>
-
-          <p class="eyebrow eyebrow-aqua">
-            LET'S CONNECT
-          </p>
-
-
-          <h2>
-            Secure. Compliant.
-            <span>Future-ready.</span>
-          </h2>
-
-
-          <p>
-            Let's discuss how I can help your organisation
-            build a stronger, more resilient technology foundation.
-          </p>
-
+    <footer>
+        <div class="container">
+            <p>&copy; Darwish Fawaz. All rights reserved.</p>
         </div>
-
-
-        <a class="button button-light"
-           href="mailto:YOUR_EMAIL">
-
-          Get in touch →
-
-        </a>
-
-      </div>
-
-    </section>
-
-  </main>
-
-
-
-  <!-- =========================
-       FOOTER
-  ========================== -->
-
-  <footer class="site-footer">
-
-    <div class="container footer-inner">
-
-      <p>
-        © 2026 Darwish Fawaz
-        · Infrastructure &amp; Security Architect
-      </p>
-
-
-      <p>
-        <strong>DF</strong>
-        · Design · Build · Secure
-      </p>
-
-    </div>
-
-  </footer>
-
+    </footer>
 
 </body>
-
 </html>
