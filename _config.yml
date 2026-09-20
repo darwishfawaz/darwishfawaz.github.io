@@ -1,23 +1,8 @@
-title: "Darwish Fawaz"
-
-description: "Infrastructure & Security Architect"
-
+title: Darwish Fawaz | Infrastructure & Security Architect
+description: Portfolio and professional site for Darwish Fawaz - Infrastructure & Security Architect.
 url: "https://darwishfawaz.github.io"
-baseurl: ""
 
-author:
-  name: "Darwish Fawaz"
-
-markdown: kramdown
-
-kramdown:
-  input: GFM
-
+# GitHub Pages / Jekyll configurations
+theme: jekyll-theme-primer
 sass:
   style: compressed
-
-exclude:
-  - README.md
-  - Gemfile
-  - Gemfile.lock
-  - node_modules
