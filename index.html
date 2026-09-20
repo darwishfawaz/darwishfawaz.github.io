@@ -9,31 +9,23 @@ layout: null
   <title>Darwish Fawaz | Cloud Infrastructure &amp; Security Architect</title>
   <meta name="description" content="Cloud Infrastructure &amp; Security Architect in London. Azure landing zones, Zero Trust, Microsoft Sentinel, DevSecOps and AI platforms for regulated financial services.">
   <meta name="author" content="Darwish Fawaz">
-  <meta name="color-scheme" content="light dark">
-  <meta name="theme-color" content="#0b1b2e">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#060814">
   <link rel="canonical" href="https://darwishfawaz.github.io/">
 
-  <!-- Social preview -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="Darwish Fawaz | Cloud Infrastructure &amp; Security Architect">
   <meta property="og:description" content="Secure cloud platforms for regulated financial services: Azure, Zero Trust, Sentinel, DevSecOps and AI.">
   <meta property="og:url" content="https://darwishfawaz.github.io/">
   <meta name="twitter:card" content="summary">
 
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b1b2e'/%3E%3Ctext x='32' y='42' font-family='Arial,sans-serif' font-weight='700' font-size='28' text-anchor='middle' fill='%23ffffff'%3EDF%3C/text%3E%3C/svg%3E">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23a78bfa'/%3E%3Cstop offset='1' stop-color='%2322d3ee'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='url(%23g)'/%3E%3Ctext x='32' y='42' font-family='Arial,sans-serif' font-weight='800' font-size='28' text-anchor='middle' fill='%23060814'%3EDF%3C/text%3E%3C/svg%3E">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Hanken+Grotesk:wght@400..700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
-
-  <!-- Apply saved theme before first paint to avoid a flash -->
-  <script>
-    try {
-      var t = localStorage.getItem("theme");
-      if (t === "light" || t === "dark") document.documentElement.setAttribute("data-theme", t);
-    } catch (e) {}
-  </script>
+  <script>document.documentElement.classList.add("js");</script>
 
   <script type="application/ld+json">
   {
@@ -44,10 +36,7 @@ layout: null
     "url": "https://darwishfawaz.github.io/",
     "email": "mailto:fawazdanny@gmail.com",
     "address": { "@type": "PostalAddress", "addressLocality": "London", "addressCountry": "GB" },
-    "sameAs": [
-      "https://www.linkedin.com/in/darwish-fawaz/",
-      "https://github.com/darwishfawaz"
-    ],
+    "sameAs": ["https://www.linkedin.com/in/darwish-fawaz/", "https://github.com/darwishfawaz"],
     "knowsAbout": ["Microsoft Azure", "Zero Trust", "Microsoft Sentinel", "Terraform", "DevSecOps", "FinOps", "AI landing zones"]
   }
   </script>
@@ -55,318 +44,204 @@ layout: null
 
 <body>
   <a class="skip" href="#main">Skip to content</a>
+  <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
 
   <header class="nav">
-    <div class="wrap nav-inner">
-      <a class="brand" href="#top" aria-label="Darwish Fawaz, home">
-        <span class="brand-mark" aria-hidden="true">DF</span>
-        <span>Darwish Fawaz</span>
-      </a>
+    <div class="nav-inner">
+      <a class="brand" href="#top" aria-label="Darwish Fawaz, home"><span class="brand-mark" aria-hidden="true">DF</span>Darwish Fawaz</a>
       <nav aria-label="Primary">
         <ul class="nav-links">
+          <li><a href="#capabilities">Capabilities</a></li>
           <li><a href="#work">Work</a></li>
           <li><a href="#experience">Experience</a></li>
           <li><a href="#writing">LinkedIn</a></li>
-          <li><a href="#principles">Approach</a></li>
         </ul>
       </nav>
-      <div class="nav-actions">
-        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch colour theme">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
-            <circle cx="12" cy="12" r="9"></circle>
-            <path d="M12 3v18" ></path>
-            <path d="M12 3a9 9 0 0 1 0 18z" fill="currentColor"></path>
-          </svg>
-        </button>
-        <a class="btn btn-primary btn-sm" href="#contact">Contact</a>
-      </div>
+      <a class="btn btn-primary btn-sm" href="#contact">Let's talk</a>
     </div>
   </header>
 
   <main id="main">
-    <!-- ================= Hero ================= -->
+    <!-- ================= HERO ================= -->
     <section class="hero" id="top">
-      <div class="wrap hero-grid">
-        <div>
-          <p class="hero-kicker">Darwish Fawaz, Cloud Infrastructure &amp; Security Architect in London</p>
-          <h1>Secure cloud platforms for regulated financial services.</h1>
-          <p class="hero-lead">
-            I architect Azure and Microsoft 365 environments where security, cost and delivery speed have to hold together.
-            20+ years in enterprise IT, 8+ of them specialising in Azure, Zero Trust and AI platforms.
-          </p>
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="#work">See selected work</a>
-            <a class="btn" href="#contact">Get in touch</a>
-          </div>
-          <p class="hero-note">Currently lead architect at the Financial Services Compensation Scheme.</p>
+      <div class="aurora" aria-hidden="true"><i></i><i></i><i></i></div>
+      <canvas id="mesh" aria-hidden="true"></canvas>
+      <div class="wrap">
+        <span class="pill"><span class="dot"></span>Cloud Infrastructure &amp; Security Architect, London</span>
+        <h1>
+          Architecting secure cloud for
+          <span class="rotator grad-text" aria-live="polite"><span id="rot">regulated finance.</span></span>
+        </h1>
+        <p class="hero-lead">
+          I'm <b>Darwish Fawaz</b>. I design Azure and Microsoft 365 platforms where <b>security, cost and speed</b> hold together.
+          20+ years in enterprise IT, 8+ specialised in Azure, Zero Trust and AI platforms.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#work">Explore my work</a>
+          <a class="btn" href="#contact">Get in touch</a>
         </div>
-
-        <!-- Interactive hub-and-spoke diagram, built in the script at the bottom of the page -->
-        <div class="diagram">
-          <svg id="arch" viewBox="0 0 560 560" role="group"
-               aria-label="Architecture diagram with identity at the centre, connected to landing zones, networking, security operations, DevSecOps, AI platform and FinOps"></svg>
-          <div class="dia-caption" aria-live="polite">
-            <h2 id="diaTitle"></h2>
-            <p id="diaText"></p>
-          </div>
-        </div>
+        <ul class="hero-badges" aria-label="Highlights">
+          <li>Azure Solutions Architect Expert</li>
+          <li>Cybersecurity Architect Expert</li>
+          <li>Terraform Associate</li>
+          <li>Lead architect at FSCS</li>
+        </ul>
       </div>
+      <div class="scroll-hint" aria-hidden="true"></div>
     </section>
 
-    <!-- ================= Outcomes ================= -->
-    <section class="section" style="padding-top:0" aria-label="Key outcomes">
+    <!-- ================= MARQUEE ================= -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track" id="marquee"></div>
+    </div>
+
+    <!-- ================= STATS ================= -->
+    <section class="section" aria-label="Key outcomes">
       <div class="wrap">
         <ul class="stats">
-          <li class="stat">
-            <div class="stat-value">30%</div>
-            <p class="stat-label">lower annual Azure spend through a FinOps programme</p>
-          </li>
-          <li class="stat">
-            <div class="stat-value">60%+</div>
-            <p class="stat-label">faster environment provisioning with landing zones</p>
-          </li>
-          <li class="stat">
-            <div class="stat-value">20+</div>
-            <p class="stat-label">years in enterprise IT, 8+ specialised in Azure and M365</p>
-          </li>
-          <li class="stat">
-            <div class="stat-value">8</div>
-            <p class="stat-label">certifications across Microsoft, HashiCorp, AWS and Cisco</p>
-          </li>
+          <li class="stat reveal"><div class="stat-num grad-text"><span data-count="30">30</span>%</div><p>lower annual Azure spend through a FinOps programme</p></li>
+          <li class="stat reveal" style="--d:.08s"><div class="stat-num grad-text"><span data-count="60">60</span>%+</div><p>faster environment provisioning with landing zones</p></li>
+          <li class="stat reveal" style="--d:.16s"><div class="stat-num grad-text"><span data-count="20">20</span>+</div><p>years in enterprise IT, 8+ specialised in Azure and M365</p></li>
+          <li class="stat reveal" style="--d:.24s"><div class="stat-num grad-text"><span data-count="8">8</span></div><p>certifications across Microsoft, HashiCorp, AWS and Cisco</p></li>
         </ul>
       </div>
     </section>
 
-    <!-- ================= What I do ================= -->
-    <section class="section section--tint" id="capabilities">
+    <!-- ================= CAPABILITIES ================= -->
+    <section class="section" id="capabilities" style="padding-top:0">
       <div class="wrap">
-        <div class="section-head">
-          <h2>Architecture that ships, from design authority to hands-on delivery.</h2>
-          <p>I work across cloud, identity, security operations and AI, and I stay close enough to the build to make sure the design survives contact with production.</p>
+        <div class="section-head reveal">
+          <span class="chip">What I do</span>
+          <h2>One architect across cloud, identity, security and AI.</h2>
+          <p>From design authority to hands-on delivery, so the architecture survives contact with production.</p>
         </div>
-        <ul class="caps">
-          <li class="cap">
+        <div class="bento">
+          <article class="tile reveal">
+            <div class="tile-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 18a4 4 0 0 1-.5-7.97A6 6 0 0 1 18 9a4.5 4.5 0 0 1-.5 9z"/></svg></div>
             <h3>Cloud architecture</h3>
-            <p>Enterprise-scale Azure landing zones on the Cloud Adoption Framework, hub-spoke networking, hybrid connectivity and policy guardrails, with Defender for Cloud covering AWS and GCP.</p>
+            <p>Enterprise-scale Azure landing zones on the Cloud Adoption Framework: hub-spoke networking, hybrid connectivity and policy guardrails, with Defender for Cloud covering AWS and GCP.</p>
             <ul class="tags"><li class="tag">Azure</li><li class="tag">Landing zones</li><li class="tag">Azure Policy</li><li class="tag">AWS &amp; GCP</li></ul>
-          </li>
-          <li class="cap">
+          </article>
+          <article class="tile reveal" style="--d:.08s">
+            <div class="tile-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 5v6c0 5 3.4 9.4 8 11 4.6-1.6 8-6 8-11V5z"/><path d="m9 12 2 2 4-4"/></svg></div>
             <h3>Identity and Zero Trust</h3>
-            <p>Identity-driven access built on Entra ID Conditional Access, PIM and Intune device compliance, replacing implicit network trust with continuous evaluation.</p>
-            <ul class="tags"><li class="tag">Entra ID</li><li class="tag">Conditional Access</li><li class="tag">PIM</li><li class="tag">Zscaler ZPA</li></ul>
-          </li>
-          <li class="cap">
+            <p>Entra ID Conditional Access, PIM and Intune compliance replacing implicit network trust with continuous evaluation.</p>
+            <ul class="tags"><li class="tag">Entra ID</li><li class="tag">PIM</li><li class="tag">Zscaler ZPA</li></ul>
+          </article>
+          <article class="tile reveal">
+            <div class="tile-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3"/></svg></div>
             <h3>Security operations</h3>
-            <p>Microsoft Sentinel SIEM and SOAR joined up with Defender XDR, Defender for Cloud and Copilot for Security, with playbooks that cut response time.</p>
-            <ul class="tags"><li class="tag">Sentinel</li><li class="tag">Defender XDR</li><li class="tag">KQL</li><li class="tag">Copilot for Security</li></ul>
-          </li>
-          <li class="cap">
+            <p>Sentinel SIEM and SOAR joined up with Defender XDR and Copilot for Security, with playbooks that cut response time.</p>
+            <ul class="tags"><li class="tag">Sentinel</li><li class="tag">Defender XDR</li><li class="tag">KQL</li></ul>
+          </article>
+          <article class="tile reveal" style="--d:.08s">
+            <div class="tile-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4"/></svg></div>
             <h3>AI and data platforms</h3>
-            <p>Secure landing zones where teams can build and run AI safely: private connectivity, governed data ingestion and posture controls from day one.</p>
+            <p>Secure landing zones where teams build and run AI safely: private connectivity, governed data ingestion and posture controls from day one.</p>
             <ul class="tags"><li class="tag">Microsoft Foundry</li><li class="tag">Databricks</li><li class="tag">Cosmos DB</li><li class="tag">Data Factory</li></ul>
-          </li>
-          <li class="cap">
+          </article>
+          <article class="tile reveal">
+            <div class="tile-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m8 8-5 4 5 4M16 8l5 4-5 4M14 5l-4 14"/></svg></div>
             <h3>Automation and DevSecOps</h3>
-            <p>Terraform and Azure DevOps as the standard way to build, with state isolation, approval gates, policy validation and SAST/DAST in the pipeline.</p>
+            <p>Terraform and Azure DevOps as the standard way to build, with approval gates, policy validation and SAST/DAST in the pipeline.</p>
             <ul class="tags"><li class="tag">Terraform</li><li class="tag">Azure DevOps</li><li class="tag">Bicep</li><li class="tag">Fortify</li></ul>
-          </li>
-          <li class="cap">
+          </article>
+          <article class="tile reveal" style="--d:.08s">
+            <div class="tile-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V10l7-6 7 6v11M9 21v-6h6v6"/></svg></div>
             <h3>Governance and FinOps</h3>
-            <p>Technical authority at architecture review boards and executive forums, working to NIST, ISO 27001, CIS and UK financial services regulatory standards.</p>
+            <p>Technical authority at architecture review boards and executive forums, working to NIST, ISO 27001, CIS and UK financial services standards.</p>
             <ul class="tags"><li class="tag">NIST</li><li class="tag">ISO 27001</li><li class="tag">CIS</li><li class="tag">FinOps</li></ul>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- ================= Selected work ================= -->
-    <section class="section" id="work">
-      <div class="wrap">
-        <div class="section-head">
-          <h2>Selected work</h2>
-          <p>Programmes I have designed and delivered in a regulated UK financial services environment. Open any project for the detail.</p>
-        </div>
-
-        <div class="cases">
-          <details class="case" open>
-            <summary>
-              <span class="case-title">Enterprise Azure landing zone</span>
-              <span class="case-result">Highly available, disaster-ready foundations for 6+ environments. Provisioning time cut by over 60%.</span>
-              <span class="case-icon" aria-hidden="true"></span>
-            </summary>
-            <div class="case-body">
-              <ul>
-                <li>Hub-spoke topology connected to multiple datacentres and partner networks.</li>
-                <li>Azure Firewall, Application Gateway, WAF, Front Door, Key Vault and Private Endpoints as standard building blocks.</li>
-                <li>Azure Policy guardrails and Azure Monitor Baseline Alerts (AMBA) deployed through Policy and Bicep for a consistent, Well-Architected observability baseline.</li>
-              </ul>
-              <ul class="tags"><li class="tag">Azure CAF</li><li class="tag">Azure Firewall</li><li class="tag">Front Door</li><li class="tag">Azure Policy</li><li class="tag">AMBA</li></ul>
-            </div>
-          </details>
-
-          <details class="case">
-            <summary>
-              <span class="case-title">Cloud cost optimisation</span>
-              <span class="case-result">About 30% off annual Azure spend with no loss of availability or performance.</span>
-              <span class="case-icon" aria-hidden="true"></span>
-            </summary>
-            <div class="case-body">
-              <ul>
-                <li>Reserved Instances and Savings Plans matched to real usage.</li>
-                <li>Autoscaling, storage lifecycle policies and environment scheduling.</li>
-                <li>Microsoft Sentinel ingestion optimisation to keep security telemetry affordable.</li>
-              </ul>
-              <ul class="tags"><li class="tag">FinOps</li><li class="tag">Reserved Instances</li><li class="tag">Savings Plans</li><li class="tag">Autoscaling</li></ul>
-            </div>
-          </details>
-
-          <details class="case">
-            <summary>
-              <span class="case-title">Zero Trust access transformation</span>
-              <span class="case-result">Legacy VPN replaced with identity-driven, context-aware access.</span>
-              <span class="case-icon" aria-hidden="true"></span>
-            </summary>
-            <div class="case-body">
-              <ul>
-                <li>Zscaler Private Access integrated with Entra ID Conditional Access, PIM and Intune device compliance.</li>
-                <li>Least-privilege access with continuous evaluation, removing implicit trust for remote users.</li>
-                <li>Earlier, a zero-downtime migration from on-premises Pulse Connect Secure to an Azure-hosted VPN during the COVID-19 lockdown.</li>
-              </ul>
-              <ul class="tags"><li class="tag">Zscaler ZPA</li><li class="tag">Entra ID</li><li class="tag">Conditional Access</li><li class="tag">Intune</li></ul>
-            </div>
-          </details>
-
-          <details class="case">
-            <summary>
-              <span class="case-title">AI-driven security operations centre</span>
-              <span class="case-result">One detection and response platform across cloud, on-premises workloads and endpoints.</span>
-              <span class="case-icon" aria-hidden="true"></span>
-            </summary>
-            <div class="case-body">
-              <ul>
-                <li>Microsoft Sentinel SIEM and SOAR integrated with Defender XDR, Defender for Cloud and Copilot for Security.</li>
-                <li>Automated playbooks and joined-up telemetry improved detection and reduced mean time to respond.</li>
-                <li>AWS and GCP tenants brought under the same posture management and threat detection through Defender for Cloud.</li>
-              </ul>
-              <ul class="tags"><li class="tag">Sentinel</li><li class="tag">Defender XDR</li><li class="tag">SOAR</li><li class="tag">Copilot for Security</li></ul>
-            </div>
-          </details>
-
-          <details class="case">
-            <summary>
-              <span class="case-title">Infrastructure as code and DevSecOps</span>
-              <span class="case-result">Terraform and Azure DevOps adopted as the enterprise standard.</span>
-              <span class="case-icon" aria-hidden="true"></span>
-            </summary>
-            <div class="case-body">
-              <ul>
-                <li>Workspaces, state isolation, naming conventions and pull request approval gates.</li>
-                <li>Automated policy validation with Fortify SAST and DAST in the pipeline.</li>
-                <li>Configuration drift eliminated and deployment cycles shortened through fully automated provisioning.</li>
-              </ul>
-              <ul class="tags"><li class="tag">Terraform</li><li class="tag">Azure DevOps</li><li class="tag">Bicep</li><li class="tag">Fortify</li></ul>
-            </div>
-          </details>
-
-          <details class="case">
-            <summary>
-              <span class="case-title">AI and data platform landing zone</span>
-              <span class="case-result">A governed foundation for teams to develop, deploy and operate AI safely on Microsoft Foundry.</span>
-              <span class="case-icon" aria-hidden="true"></span>
-            </summary>
-            <div class="case-body">
-              <ul>
-                <li>Data Factory, Databricks, Cosmos DB and Cognitive Services behind private endpoints.</li>
-                <li>CSPM controls, governed data ingestion and analytics pipelines.</li>
-                <li>Safe model deployment at scale, with security built into the platform rather than added later.</li>
-              </ul>
-              <ul class="tags"><li class="tag">Microsoft Foundry</li><li class="tag">Databricks</li><li class="tag">Cosmos DB</li><li class="tag">CSPM</li></ul>
-            </div>
-          </details>
-
-          <details class="case">
-            <summary>
-              <span class="case-title">Bank of England IDOBI programme</span>
-              <span class="case-result">Key cloud and security architect for FSCS's contribution to the Bank of England's depositor outcomes programme.</span>
-              <span class="case-icon" aria-hidden="true"></span>
-            </summary>
-            <div class="case-body">
-              <div>
-                <ul>
-                  <li>Azure-based architecture and integration patterns for regulated financial data processing.</li>
-                  <li>Secure electronic payment workflows and cross-sector data exchange, designed for compliance and resilience.</li>
-                </ul>
-                <a class="case-link" href="https://www.bankofengland.co.uk/statement/2023/improving-depositor-outcomes-in-bank-or-building-society-insolvency" target="_blank" rel="noopener">Read the Bank of England statement</a>
-              </div>
-              <ul class="tags"><li class="tag">Azure</li><li class="tag">Regulated data</li><li class="tag">Payments</li><li class="tag">Resilience</li></ul>
-            </div>
-          </details>
+          </article>
         </div>
       </div>
     </section>
 
-    <!-- ================= Experience ================= -->
-    <section class="section section--tint" id="experience">
+    <!-- ================= PIPELINE ================= -->
+    <section class="section" style="padding-top:0" id="pipeline">
       <div class="wrap">
-        <div class="section-head">
+        <div class="section-head reveal">
+          <span class="chip">How change reaches production</span>
+          <h2>Every deployment passes the same gates.</h2>
+        </div>
+        <div class="pipe-wrap reveal">
+          <ol class="pipe" id="pipe">
+            <li class="step"><i>1</i><b>Pull request</b><span>Change proposed in Git with peer review.</span></li>
+            <li class="step"><i>2</i><b>Terraform plan</b><span>Isolated state, exact diff of what will change.</span></li>
+            <li class="step"><i>3</i><b>Policy validation</b><span>Guardrails checked automatically before anything ships.</span></li>
+            <li class="step"><i>4</i><b>SAST and DAST</b><span>Fortify scanning built into the pipeline.</span></li>
+            <li class="step"><i>5</i><b>Approval gate</b><span>Named approvers sign off on protected environments.</span></li>
+            <li class="step"><i>6</i><b>Deploy</b><span>Automated provisioning with drift detection.</span></li>
+          </ol>
+          <p class="pipe-note">Terraform and Azure DevOps became the enterprise IaC standard, removing configuration drift and shortening deployment cycles.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= WORK ================= -->
+    <section class="section" id="work" style="padding-top:0">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="chip">Selected work</span>
+          <h2>Programmes delivered in a regulated UK financial services environment.</h2>
+        </div>
+        <div class="explorer reveal">
+          <div class="tabs" role="tablist" aria-label="Projects" id="tabs"></div>
+          <div id="panels"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= EXPERIENCE ================= -->
+    <section class="section" id="experience" style="padding-top:0">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="chip">Experience</span>
           <h2>Twenty years from server room to cloud platform.</h2>
         </div>
         <ol class="timeline">
-          <li class="job">
+          <li class="job reveal">
             <div class="job-when">2017 to present</div>
-            <div>
-              <h3>Cloud Infrastructure &amp; Cybersecurity Architect</h3>
-              <p class="job-org">Financial Services Compensation Scheme</p>
-              <ul>
-                <li>Sole architect and technical lead for Azure and Microsoft 365, owning platform strategy, design authority, security governance and hands-on delivery.</li>
-                <li>Leads a cross-functional infrastructure team covering 2nd and 3rd-line support, and acts as the technical authority at CAB, TDA and executive forums.</li>
-                <li>Runs annual DR testing, penetration test cycles and hardening remediation.</li>
-              </ul>
-            </div>
+            <h3>Cloud Infrastructure &amp; Cybersecurity Architect</h3>
+            <p class="job-org">Financial Services Compensation Scheme</p>
+            <ul>
+              <li>Sole architect and technical lead for Azure and Microsoft 365: platform strategy, design authority, security governance and hands-on delivery.</li>
+              <li>Leads a cross-functional infrastructure team covering 2nd and 3rd-line support, and is the technical authority at CAB, TDA and executive forums.</li>
+              <li>Runs annual DR testing, penetration test cycles and hardening remediation.</li>
+            </ul>
           </li>
-          <li class="job">
+          <li class="job reveal">
             <div class="job-when">2005 to 2017</div>
-            <div>
-              <h3>IT Technical Manager</h3>
-              <p class="job-org">SkyNet Worldwide Express</p>
-              <ul>
-                <li>Progressed from Infrastructure Engineer to IT Technical Manager across UK and international sites.</li>
-                <li>Built shipping and routing automation and a paperless returns solution adopted by major retail clients.</li>
-                <li>Delivered PCI DSS hardening, network redesign and full infrastructure buildouts for new branches in Hong Kong, Germany and the Netherlands.</li>
-              </ul>
-            </div>
+            <h3>IT Technical Manager</h3>
+            <p class="job-org">SkyNet Worldwide Express</p>
+            <ul>
+              <li>Progressed from Infrastructure Engineer to IT Technical Manager across UK and international sites.</li>
+              <li>Built shipping and routing automation and a paperless returns solution adopted by major retail clients.</li>
+              <li>Delivered PCI DSS hardening, network redesign and full infrastructure buildouts for new branches in Hong Kong, Germany and the Netherlands.</li>
+            </ul>
           </li>
         </ol>
-        <p class="edu">Education: Mathematics and Computer Science, Lebanese University.</p>
+        <p class="edu reveal">Education: Mathematics and Computer Science, Lebanese University.</p>
       </div>
     </section>
 
-    <!-- ================= Certifications ================= -->
-    <section class="section" id="certifications">
+    <!-- ================= CERTIFICATIONS ================= -->
+    <section class="section" id="certifications" style="padding-top:0">
       <div class="wrap">
-        <div class="section-head">
-          <h2>Certifications</h2>
+        <div class="section-head reveal">
+          <span class="chip">Certifications</span>
+          <h2>Verified expertise across Microsoft, HashiCorp, AWS and Cisco.</h2>
         </div>
-        <ul class="certs">
-          <li class="cert"><strong>Azure Solutions Architect Expert</strong><span>Microsoft Certified</span></li>
-          <li class="cert"><strong>Cybersecurity Architect Expert</strong><span>Microsoft Certified</span></li>
-          <li class="cert"><strong>Azure Security Engineer Associate</strong><span>Microsoft Certified</span></li>
-          <li class="cert"><strong>Azure Administrator Associate</strong><span>Microsoft Certified</span></li>
-          <li class="cert"><strong>Terraform Associate (003)</strong><span>HashiCorp Certified</span></li>
-          <li class="cert"><strong>Cloud Practitioner (CLF-C02)</strong><span>AWS Certified</span></li>
-          <li class="cert"><strong>CCNA and CCNP</strong><span>Cisco</span></li>
-          <li class="cert"><strong>ITIL Foundation</strong><span>ITIL</span></li>
-        </ul>
+        <ul class="certs" id="certs"></ul>
       </div>
     </section>
 
-    <!-- ================= Latest from LinkedIn ================= -->
-    <section class="section section--tint" id="writing">
+    <!-- ================= LINKEDIN ================= -->
+    <section class="section" id="writing" style="padding-top:0">
       <div class="wrap">
-        <div class="feed-head">
+        <div class="feed-head reveal">
           <div class="section-head">
-            <h2>Latest from LinkedIn</h2>
-            <p>Notes on cloud, security and AI as I publish them.</p>
+            <span class="chip">Latest from LinkedIn</span>
+            <h2>Notes on cloud, security and AI.</h2>
           </div>
           <a class="btn" href="https://www.linkedin.com/in/darwish-fawaz/" target="_blank" rel="noopener">Follow on LinkedIn</a>
         </div>
@@ -378,54 +253,42 @@ layout: null
       </div>
     </section>
 
-    <!-- ================= Approach ================= -->
-    <section class="section" id="principles">
+    <!-- ================= PRINCIPLES ================= -->
+    <section class="section" id="principles" style="padding-top:0">
       <div class="wrap">
-        <div class="section-head">
-          <h2>How I approach architecture</h2>
+        <div class="section-head reveal">
+          <span class="chip">Approach</span>
+          <h2>How I approach architecture.</h2>
         </div>
         <ul class="principles">
-          <li class="principle"><h3>Secure by design</h3><p>Security controls belong in the architecture, not bolted on after deployment.</p></li>
-          <li class="principle"><h3>Automate the repeatable</h3><p>Infrastructure should be reproducible, version-controlled and deployed through code.</p></li>
-          <li class="principle"><h3>Identity is the control plane</h3><p>Modern security starts with identity, privilege, device trust and continuous evaluation.</p></li>
-          <li class="principle"><h3>Architecture must ship</h3><p>A design has to survive implementation, operations, budgets and real-world constraints.</p></li>
-          <li class="principle"><h3>AI with guardrails</h3><p>AI adoption needs governed data, controlled identities, security boundaries and observability.</p></li>
-          <li class="principle"><h3>Evidence over slideware</h3><p>Decisions are validated through proofs of concept, testing and measurable outcomes.</p></li>
+          <li class="principle reveal"><h3>Secure by design</h3><p>Security controls belong in the architecture, not bolted on after deployment.</p></li>
+          <li class="principle reveal" style="--d:.06s"><h3>Automate the repeatable</h3><p>Infrastructure should be reproducible, version-controlled and deployed through code.</p></li>
+          <li class="principle reveal" style="--d:.12s"><h3>Identity is the control plane</h3><p>Modern security starts with identity, privilege, device trust and continuous evaluation.</p></li>
+          <li class="principle reveal"><h3>Architecture must ship</h3><p>A design has to survive implementation, operations, budgets and real-world constraints.</p></li>
+          <li class="principle reveal" style="--d:.06s"><h3>AI with guardrails</h3><p>AI adoption needs governed data, controlled identities, security boundaries and observability.</p></li>
+          <li class="principle reveal" style="--d:.12s"><h3>Evidence over slideware</h3><p>Decisions are validated through proofs of concept, testing and measurable outcomes.</p></li>
         </ul>
       </div>
     </section>
 
-    <!-- ================= Technology ================= -->
-    <section class="section section--tint" id="technology">
+    <!-- ================= CONTACT ================= -->
+    <section class="contact" id="contact" aria-labelledby="contactTitle">
+      <div class="aurora" aria-hidden="true"><i></i><i></i><i></i></div>
       <div class="wrap">
-        <div class="section-head">
-          <h2>Technology I work with</h2>
+        <div class="contact-card reveal">
+          <h2 id="contactTitle">Let's build something <span class="grad-text">secure.</span></h2>
+          <p class="contact-lead">Cloud, security or AI platform work in a regulated environment? I'm happy to compare notes.</p>
+          <a class="contact-mail" href="mailto:fawazdanny@gmail.com">fawazdanny@gmail.com</a>
+          <div class="contact-actions">
+            <a class="btn btn-primary" href="mailto:fawazdanny@gmail.com">Send an email</a>
+            <button class="btn" id="copyMail" type="button">Copy address</button>
+            <a class="btn" href="https://www.linkedin.com/in/darwish-fawaz/" target="_blank" rel="noopener">LinkedIn</a>
+            <a class="btn" href="https://github.com/darwishfawaz" target="_blank" rel="noopener">GitHub</a>
+          </div>
         </div>
-        <ul class="stack">
-          <li>Microsoft Azure</li><li>Microsoft 365</li><li>Entra ID</li><li>Intune</li><li>Defender XDR</li>
-          <li>Defender for Cloud</li><li>Microsoft Sentinel</li><li>Purview</li><li>Copilot for Security</li>
-          <li>Microsoft Foundry</li><li>Databricks</li><li>Cosmos DB</li><li>Terraform</li><li>Bicep</li>
-          <li>Azure DevOps</li><li>GitHub</li><li>KQL</li><li>Zscaler</li><li>AWS</li><li>Google Cloud</li>
-          <li>VMware vSphere</li><li>Cisco</li><li>Fortinet</li><li>Check Point</li>
-        </ul>
       </div>
     </section>
   </main>
-
-  <!-- ================= Contact ================= -->
-  <section class="contact" id="contact" aria-labelledby="contactTitle">
-    <div class="wrap">
-      <h2 id="contactTitle">Let's talk architecture.</h2>
-      <p class="contact-lead">Cloud, security or AI platform work in a regulated environment? I'm happy to compare notes.</p>
-      <a class="contact-mail" href="mailto:fawazdanny@gmail.com">fawazdanny@gmail.com</a>
-      <div class="contact-actions">
-        <a class="btn btn-primary" href="mailto:fawazdanny@gmail.com">Send an email</a>
-        <button class="btn" id="copyMail" type="button">Copy address</button>
-        <a class="btn" href="https://www.linkedin.com/in/darwish-fawaz/" target="_blank" rel="noopener">LinkedIn</a>
-        <a class="btn" href="https://github.com/darwishfawaz" target="_blank" rel="noopener">GitHub</a>
-      </div>
-    </div>
-  </section>
 
   <footer class="footer">
     <div class="wrap">
@@ -439,269 +302,338 @@ layout: null
     "use strict";
 
     /* =====================================================================
-       1. SETTINGS YOU MAY WANT TO EDIT
+       SETTINGS YOU MAY WANT TO EDIT
        ===================================================================== */
     var LINKEDIN_URL = "https://www.linkedin.com/in/darwish-fawaz/";
 
-    // Option A (automatic): paste an RSS/Atom feed URL of your LinkedIn posts here.
-    // Create one with a free feed generator such as rss.app or FetchRSS (see README).
+    // Option A (automatic): paste an RSS/Atom feed URL of your LinkedIn posts (see README).
     var FEED_URL = "";
 
-    // Option B (manual): add your own posts here. Newest first. Only https links are used.
-    // Example:
-    // { title: "Why identity is the control plane", date: "2026-09-01",
-    //   url: "https://www.linkedin.com/posts/...", excerpt: "One or two lines from the post." }
+    // Option B (manual): newest first. Only https links are used.
+    // { title: "Post headline", date: "2026-09-01", url: "https://www.linkedin.com/posts/...", excerpt: "One or two lines." }
     var POSTS = [];
-
     var MAX_POSTS = 3;
 
-    /* =====================================================================
-       2. HERO ARCHITECTURE DIAGRAM
-       ===================================================================== */
-    var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    var NS = "http://www.w3.org/2000/svg";
-    var svg = document.getElementById("arch");
-    var capTitle = document.getElementById("diaTitle");
-    var capText = document.getElementById("diaText");
+    var WORDS = ["regulated finance.", "Zero Trust.", "the AI era.", "real-world scale."];
 
-    var HUB = {
-      label: "Identity", sub: "Zero Trust",
-      title: "Identity is the control plane",
-      text: "Entra ID Conditional Access, PIM and Intune device compliance replaced legacy VPN with Zscaler Private Access, so access follows identity and context rather than network location."
-    };
-    var SPOKES = [
-      { label: "Landing zones", title: "Azure landing zones",
-        text: "Cloud Adoption Framework landing zones across 6+ environments, with policy guardrails that cut environment provisioning time by over 60%." },
-      { label: "Networking", title: "Hub-spoke networking",
-        text: "Hub-spoke topology with Azure Firewall, Application Gateway, WAF, Front Door and Private Endpoints, connected to datacentres and partner networks." },
-      { label: "Sentinel SOC", title: "AI-driven security operations",
-        text: "Microsoft Sentinel SIEM and SOAR with Defender XDR and Copilot for Security. Automated playbooks reduced mean time to respond." },
-      { label: "DevSecOps", title: "Infrastructure as code",
-        text: "Terraform and Azure DevOps as the enterprise standard, with approval gates, policy validation and Fortify SAST and DAST." },
-      { label: "AI platform", title: "AI and data landing zone",
-        text: "A secure foundation for Microsoft Foundry using Data Factory, Databricks and Cosmos DB behind private endpoints, with CSPM controls." },
-      { label: "FinOps", title: "Cost optimisation",
-        text: "About 30% off annual Azure spend through Reserved Instances, Savings Plans, autoscaling, storage lifecycle policies and Sentinel ingestion tuning." }
+    var TECH = ["Microsoft Azure", "Microsoft 365", "Entra ID", "Intune", "Defender XDR", "Defender for Cloud", "Microsoft Sentinel", "Purview",
+      "Copilot for Security", "Microsoft Foundry", "Databricks", "Cosmos DB", "Terraform", "Bicep", "Azure DevOps", "GitHub", "KQL",
+      "Zscaler", "AWS", "Google Cloud", "VMware vSphere", "Cisco", "Fortinet", "Check Point"];
+
+    var CERTS = [
+      ["Azure Solutions Architect Expert", "Microsoft Certified"],
+      ["Cybersecurity Architect Expert", "Microsoft Certified"],
+      ["Azure Security Engineer Associate", "Microsoft Certified"],
+      ["Azure Administrator Associate", "Microsoft Certified"],
+      ["Terraform Associate (003)", "HashiCorp Certified"],
+      ["Cloud Practitioner (CLF-C02)", "AWS Certified"],
+      ["CCNA and CCNP", "Cisco"],
+      ["ITIL Foundation", "ITIL"]
     ];
 
-    function el(name, attrs, parent) {
-      var e = document.createElementNS(NS, name);
-      for (var k in attrs) { if (Object.prototype.hasOwnProperty.call(attrs, k)) e.setAttribute(k, attrs[k]); }
-      if (parent) parent.appendChild(e);
-      return e;
+    var PROJECTS = [
+      { tab: "Azure landing zone", metric: "60%+", label: "faster environment provisioning",
+        title: "Enterprise Azure landing zone",
+        result: "Highly available, disaster-ready foundations for 6+ environments.",
+        points: ["Hub-spoke topology connected to multiple datacentres and partner networks.",
+                 "Azure Firewall, Application Gateway, WAF, Front Door, Key Vault and Private Endpoints as standard building blocks.",
+                 "Azure Policy guardrails and Azure Monitor Baseline Alerts (AMBA) deployed through Policy and Bicep."],
+        tags: ["Azure CAF", "Azure Firewall", "Front Door", "Azure Policy", "AMBA"] },
+      { tab: "Cost optimisation", metric: "~30%", label: "lower annual Azure spend",
+        title: "Cloud cost optimisation",
+        result: "A FinOps programme that cut spend with no loss of availability or performance.",
+        points: ["Reserved Instances and Savings Plans matched to real usage.",
+                 "Autoscaling, storage lifecycle policies and environment scheduling.",
+                 "Microsoft Sentinel ingestion optimisation to keep security telemetry affordable."],
+        tags: ["FinOps", "Reserved Instances", "Savings Plans", "Autoscaling"] },
+      { tab: "Zero Trust access", metric: "0", label: "implicit trust for remote access",
+        title: "Zero Trust access transformation",
+        result: "Legacy VPN replaced with identity-driven, context-aware access.",
+        points: ["Zscaler Private Access integrated with Entra ID Conditional Access, PIM and Intune device compliance.",
+                 "Least-privilege access with continuous evaluation.",
+                 "Earlier: a zero-downtime migration from on-premises Pulse Connect Secure to an Azure-hosted VPN during the COVID-19 lockdown."],
+        tags: ["Zscaler ZPA", "Entra ID", "Conditional Access", "Intune"] },
+      { tab: "AI-driven SOC", metric: "1", label: "platform for detection and response",
+        title: "AI-driven security operations centre",
+        result: "Centralised threat detection across cloud, on-premises workloads and endpoints.",
+        points: ["Microsoft Sentinel SIEM and SOAR integrated with Defender XDR, Defender for Cloud and Copilot for Security.",
+                 "Automated playbooks and joined-up telemetry improved detection and reduced mean time to respond.",
+                 "AWS and GCP tenants brought under the same posture management through Defender for Cloud."],
+        tags: ["Sentinel", "Defender XDR", "SOAR", "Copilot for Security"] },
+      { tab: "IaC and DevSecOps", metric: "0", label: "configuration drift tolerated",
+        title: "Infrastructure as code and DevSecOps",
+        result: "Terraform and Azure DevOps adopted as the enterprise standard.",
+        points: ["Workspaces, state isolation, naming conventions and pull request approval gates.",
+                 "Automated policy validation with Fortify SAST and DAST in the pipeline.",
+                 "Deployment cycles shortened through fully automated provisioning."],
+        tags: ["Terraform", "Azure DevOps", "Bicep", "Fortify"] },
+      { tab: "AI and data platform", metric: "AI", label: "governed from day one",
+        title: "AI and data platform landing zone",
+        result: "A foundation for teams to develop, deploy and operate AI safely on Microsoft Foundry.",
+        points: ["Data Factory, Databricks, Cosmos DB and Cognitive Services behind private endpoints.",
+                 "CSPM controls, governed data ingestion and analytics pipelines.",
+                 "Safe model deployment at scale, with security built into the platform."],
+        tags: ["Microsoft Foundry", "Databricks", "Cosmos DB", "CSPM"] },
+      { tab: "Bank of England IDOBI", metric: "BoE", label: "regulated programme",
+        title: "Bank of England IDOBI programme",
+        result: "Key cloud and security architect for FSCS's contribution to the Bank of England's depositor outcomes programme.",
+        points: ["Azure-based architecture and integration patterns for regulated financial data processing.",
+                 "Secure electronic payment workflows and cross-sector data exchange, designed for compliance and resilience."],
+        tags: ["Azure", "Regulated data", "Payments", "Resilience"],
+        link: ["Read the Bank of England statement", "https://www.bankofengland.co.uk/statement/2023/improving-depositor-outcomes-in-bank-or-building-society-insolvency"] }
+    ];
+
+    var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    var $ = function (id) { return document.getElementById(id); };
+    function mk(tag, cls, text) { var e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; }
+
+    /* ---------- Marquee ---------- */
+    var mq = $("marquee");
+    if (mq) { TECH.concat(TECH).forEach(function (t) { mq.appendChild(mk("span", "", t)); }); }
+
+    /* ---------- Certifications ---------- */
+    var certEl = $("certs");
+    if (certEl) {
+      var check = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg>';
+      CERTS.forEach(function (c, i) {
+        var li = mk("li", "cert reveal");
+        li.style.setProperty("--d", (i % 4) * 0.06 + "s");
+        var seal = mk("div", "seal"); seal.innerHTML = check;
+        var box = mk("div"); box.appendChild(mk("strong", "", c[0])); box.appendChild(mk("span", "", c[1]));
+        li.appendChild(seal); li.appendChild(box); certEl.appendChild(li);
+      });
     }
 
-    if (svg) {
-      var CX = 280, CY = 280, R = 200;
-      var items = [];   // { data, node, link }
+    /* ---------- Project explorer ---------- */
+    var tabsEl = $("tabs"), panelsEl = $("panels");
+    if (tabsEl && panelsEl) {
+      var tabBtns = [], panels = [];
+      PROJECTS.forEach(function (p, i) {
+        var b = mk("button", "tab", p.tab);
+        b.type = "button"; b.setAttribute("role", "tab"); b.id = "tab" + i; b.setAttribute("aria-controls", "panel" + i);
+        tabsEl.appendChild(b); tabBtns.push(b);
 
-      el("circle", { "class": "dia-ring dia-ring--outer", cx: CX, cy: CY, r: 252 }, svg);
-      el("circle", { "class": "dia-ring", cx: CX, cy: CY, r: R }, svg);
+        var pn = mk("div", "panel"); pn.id = "panel" + i; pn.setAttribute("role", "tabpanel"); pn.setAttribute("aria-labelledby", "tab" + i);
+        var m = mk("div", "metric grad-text", p.metric);
+        pn.appendChild(m); pn.appendChild(mk("div", "metric-label", p.label));
+        pn.appendChild(mk("h3", "", p.title)); pn.appendChild(mk("p", "panel-result", p.result));
+        var ul = mk("ul", "points"); p.points.forEach(function (x) { ul.appendChild(mk("li", "", x)); }); pn.appendChild(ul);
+        var tg = mk("ul", "tags"); p.tags.forEach(function (x) { tg.appendChild(mk("li", "tag", x)); }); pn.appendChild(tg);
+        if (p.link) { var a = mk("a", "more", p.link[0]); a.href = p.link[1]; a.target = "_blank"; a.rel = "noopener"; pn.appendChild(a); }
+        panelsEl.appendChild(pn); panels.push(pn);
+      });
+      var selectTab = function (n, focus) {
+        tabBtns.forEach(function (b, i) {
+          var on = i === n;
+          b.setAttribute("aria-selected", on ? "true" : "false");
+          b.tabIndex = on ? 0 : -1;
+          panels[i].hidden = !on;
+          if (on) { panels[i].classList.remove("swap"); void panels[i].offsetWidth; panels[i].classList.add("swap"); }
+        });
+        if (focus) tabBtns[n].focus();
+      };
+      tabBtns.forEach(function (b, i) {
+        b.addEventListener("click", function () { selectTab(i); });
+        b.addEventListener("keydown", function (e) {
+          var k = e.key, n = null;
+          if (k === "ArrowDown" || k === "ArrowRight") n = (i + 1) % tabBtns.length;
+          if (k === "ArrowUp" || k === "ArrowLeft") n = (i - 1 + tabBtns.length) % tabBtns.length;
+          if (n !== null) { e.preventDefault(); selectTab(n, true); }
+        });
+      });
+      selectTab(0);
+    }
 
-      var linkLayer = el("g", {}, svg);
-      var packetLayer = el("g", {}, svg);
+    /* ---------- Hero rotating words ---------- */
+    var rot = $("rot");
+    if (rot && !reduce) {
+      var wi = 0;
+      setInterval(function () {
+        rot.classList.add("out");
+        setTimeout(function () { wi = (wi + 1) % WORDS.length; rot.textContent = WORDS[wi]; rot.classList.remove("out"); }, 420);
+      }, 2800);
+    }
 
-      // Spokes
-      var spokeNodes = [];
-      SPOKES.forEach(function (s, i) {
-        var a = (-90 + i * 60) * Math.PI / 180;
-        var x = Math.round(CX + R * Math.cos(a));
-        var y = Math.round(CY + R * Math.sin(a));
-        var link = el("line", { "class": "dia-link", x1: CX, y1: CY, x2: x, y2: y }, linkLayer);
-
-        if (!reduceMotion) {
-          var inward = i % 2 === 1;
-          var path = inward ? "M" + x + "," + y + " L" + CX + "," + CY : "M" + CX + "," + CY + " L" + x + "," + y;
-          var dot = el("circle", { "class": "dia-packet", r: 4.5, cx: 0, cy: 0 }, packetLayer);
-          el("animateMotion", {
-            dur: (3.2 + (i % 3) * 0.7).toFixed(1) + "s",
-            begin: (i * 0.55).toFixed(2) + "s",
-            repeatCount: "indefinite",
-            path: path
-          }, dot);
+    /* ---------- Hero network mesh (canvas) ---------- */
+    var cv = $("mesh");
+    if (cv && cv.getContext) {
+      var ctx = cv.getContext("2d"), dpr = Math.min(window.devicePixelRatio || 1, 2), W = 0, H = 0, pts = [];
+      var mouse = { x: -999, y: -999 }, running = true;
+      var resize = function () {
+        var r = cv.getBoundingClientRect(); W = r.width; H = r.height;
+        cv.width = W * dpr; cv.height = H * dpr; ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+        var n = Math.max(28, Math.min(110, Math.floor(W * H / 15000)));
+        pts = [];
+        for (var i = 0; i < n; i++) {
+          pts.push({ x: Math.random() * W, y: Math.random() * H, vx: (Math.random() - 0.5) * 0.38, vy: (Math.random() - 0.5) * 0.38,
+                     r: Math.random() * 1.4 + 0.8, hub: i % 13 === 0 });
         }
-        spokeNodes.push({ data: s, x: x, y: y, link: link });
-      });
-
-      // Hub
-      var hubG = el("g", { "class": "dia-node dia-node--hub", tabindex: "0", role: "button", "aria-label": HUB.title }, svg);
-      el("circle", { "class": "dia-halo", cx: CX, cy: CY, r: 72 }, hubG);
-      el("circle", { "class": "dia-hub", cx: CX, cy: CY, r: 66 }, hubG);
-      var hubT = el("text", { x: CX, y: CY - 3, "text-anchor": "middle", style: "font-size:23px;font-weight:700" }, hubG);
-      hubT.textContent = HUB.label;
-      var hubS = el("text", { "class": "dia-hub-sub", x: CX, y: CY + 20, "text-anchor": "middle" }, hubG);
-      hubS.textContent = HUB.sub;
-      items.push({ data: HUB, node: hubG, link: null });
-
-      // Spoke pills (drawn last so they sit on top of the links)
-      spokeNodes.forEach(function (s) {
-        var w = Math.round(s.data.label.length * 9.6 + 36);
-        var g = el("g", { "class": "dia-node", transform: "translate(" + s.x + "," + s.y + ")", tabindex: "0", role: "button", "aria-label": s.data.title }, svg);
-        el("rect", { x: -w / 2, y: -21, width: w, height: 42, rx: 21 }, g);
-        var t = el("text", { x: 0, y: 6, "text-anchor": "middle" }, g);
-        t.textContent = s.data.label;
-        items.push({ data: s.data, node: g, link: s.link });
-      });
-
-      var current = -1;
-      function activate(i) {
-        if (i === current) return;
-        current = i;
-        items.forEach(function (it, idx) {
-          var on = idx === i;
-          it.node.classList.toggle("is-active", on);
-          if (it.link) it.link.classList.toggle("is-active", on);
-        });
-        capTitle.textContent = items[i].data.title;
-        capText.textContent = items[i].data.text;
-      }
-
-      var timer = null;
-      function stopAuto() { if (timer) { clearInterval(timer); timer = null; } }
-      function userPick(i) { stopAuto(); activate(i); }
-
-      items.forEach(function (it, idx) {
-        it.node.addEventListener("mouseenter", function () { userPick(idx); });
-        it.node.addEventListener("focus", function () { userPick(idx); });
-        it.node.addEventListener("click", function () { userPick(idx); });
-        it.node.addEventListener("keydown", function (e) {
-          if (e.key === "Enter" || e.key === " ") { e.preventDefault(); userPick(idx); }
-        });
-      });
-
-      activate(0);
-      if (!reduceMotion) {
-        var n = 0;
-        timer = setInterval(function () { n = (n + 1) % items.length; activate(n); }, 5200);
+      };
+      var draw = function () {
+        ctx.clearRect(0, 0, W, H);
+        var LINK = 140, i, j, p, q, dx, dy, d;
+        for (i = 0; i < pts.length; i++) {
+          p = pts[i];
+          if (!reduce) {
+            p.x += p.vx; p.y += p.vy;
+            if (p.x < -20) p.x = W + 20; if (p.x > W + 20) p.x = -20;
+            if (p.y < -20) p.y = H + 20; if (p.y > H + 20) p.y = -20;
+            dx = mouse.x - p.x; dy = mouse.y - p.y; d = Math.sqrt(dx * dx + dy * dy);
+            if (d < 170 && d > 1) { p.x += dx / d * 0.35; p.y += dy / d * 0.35; }
+          }
+          for (j = i + 1; j < pts.length; j++) {
+            q = pts[j]; dx = p.x - q.x; dy = p.y - q.y; d = dx * dx + dy * dy;
+            if (d < LINK * LINK) {
+              var a = (1 - Math.sqrt(d) / LINK) * (p.hub || q.hub ? 0.5 : 0.28);
+              ctx.strokeStyle = "rgba(130,160,255," + a.toFixed(3) + ")"; ctx.lineWidth = 1;
+              ctx.beginPath(); ctx.moveTo(p.x, p.y); ctx.lineTo(q.x, q.y); ctx.stroke();
+            }
+          }
+          dx = mouse.x - p.x; dy = mouse.y - p.y; d = Math.sqrt(dx * dx + dy * dy);
+          if (d < 190) {
+            ctx.strokeStyle = "rgba(34,211,238," + ((1 - d / 190) * 0.65).toFixed(3) + ")"; ctx.lineWidth = 1;
+            ctx.beginPath(); ctx.moveTo(p.x, p.y); ctx.lineTo(mouse.x, mouse.y); ctx.stroke();
+          }
+        }
+        for (i = 0; i < pts.length; i++) {
+          p = pts[i];
+          if (p.hub) {
+            ctx.fillStyle = "rgba(34,211,238,0.14)"; ctx.beginPath(); ctx.arc(p.x, p.y, 12, 0, 6.283); ctx.fill();
+            ctx.fillStyle = "#22d3ee"; ctx.beginPath(); ctx.arc(p.x, p.y, 3.2, 0, 6.283); ctx.fill();
+          } else {
+            ctx.fillStyle = "rgba(190,205,255,0.85)"; ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, 6.283); ctx.fill();
+          }
+        }
+      };
+      var loop = function () { if (running) draw(); if (!reduce) requestAnimationFrame(loop); };
+      resize(); draw();
+      if (!reduce) requestAnimationFrame(loop);
+      window.addEventListener("resize", function () { resize(); if (reduce) draw(); });
+      window.addEventListener("mousemove", function (e) {
+        var r = cv.getBoundingClientRect(); mouse.x = e.clientX - r.left; mouse.y = e.clientY - r.top;
+      }, { passive: true });
+      window.addEventListener("mouseout", function () { mouse.x = mouse.y = -999; });
+      if ("IntersectionObserver" in window) {
+        new IntersectionObserver(function (en) { running = en[0].isIntersecting; }).observe(cv);
       }
     }
 
-    /* =====================================================================
-       3. LATEST FROM LINKEDIN
-       ===================================================================== */
-    var postsEl = document.getElementById("posts");
+    /* ---------- Cursor glow and tile spotlight ---------- */
+    var glow = $("cursorGlow");
+    if (glow && window.matchMedia("(pointer: fine)").matches && !reduce) {
+      window.addEventListener("mousemove", function (e) {
+        glow.style.setProperty("--cx", e.clientX + "px"); glow.style.setProperty("--cy", e.clientY + "px");
+      }, { passive: true });
+    }
+    Array.prototype.forEach.call(document.querySelectorAll(".tile"), function (t) {
+      t.addEventListener("mousemove", function (e) {
+        var r = t.getBoundingClientRect();
+        t.style.setProperty("--mx", (e.clientX - r.left) + "px"); t.style.setProperty("--my", (e.clientY - r.top) + "px");
+      });
+    });
 
-    function isHttps(u) { return typeof u === "string" && /^https:\/\//i.test(u); }
-
-    function plain(html) {
-      var doc = new DOMParser().parseFromString(String(html || ""), "text/html");
-      return (doc.body.textContent || "").replace(/\s+/g, " ").trim();
+    /* ---------- Reveal, count-up and pipeline (on scroll) ---------- */
+    var reveals = document.querySelectorAll(".reveal");
+    var countUp = function (root) {
+      Array.prototype.forEach.call(root.querySelectorAll("[data-count]"), function (n) {
+        var end = parseInt(n.getAttribute("data-count"), 10), t0 = null;
+        if (reduce) { n.textContent = end; return; }
+        var tick = function (t) {
+          if (t0 === null) t0 = t;
+          var k = Math.min((t - t0) / 1400, 1), e = 1 - Math.pow(1 - k, 3);
+          n.textContent = Math.round(end * e);
+          if (k < 1) requestAnimationFrame(tick);
+        };
+        n.textContent = 0; requestAnimationFrame(tick);
+      });
+    };
+    if ("IntersectionObserver" in window) {
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (en) {
+          if (en.isIntersecting) { en.target.classList.add("in"); countUp(en.target); io.unobserve(en.target); }
+        });
+      }, { threshold: 0.15 });
+      Array.prototype.forEach.call(reveals, function (r) { io.observe(r); });
+    } else {
+      Array.prototype.forEach.call(reveals, function (r) { r.classList.add("in"); });
     }
 
-    function fmtDate(v) {
+    var pipe = $("pipe");
+    if (pipe) {
+      var steps = pipe.children, cur = 0, timer = null;
+      var paint = function () {
+        Array.prototype.forEach.call(steps, function (s, i) {
+          s.classList.toggle("done", i < cur); s.classList.toggle("now", i === cur);
+        });
+      };
+      if (reduce) { Array.prototype.forEach.call(steps, function (s) { s.classList.add("done"); }); }
+      else if ("IntersectionObserver" in window) {
+        new IntersectionObserver(function (en) {
+          if (en[0].isIntersecting && !timer) {
+            paint();
+            timer = setInterval(function () { cur = (cur + 1) % (steps.length + 1); if (cur === steps.length) { cur = steps.length; } paint(); if (cur === steps.length) { setTimeout(function () { cur = 0; paint(); }, 1400); } }, 1300);
+          } else if (!en[0].isIntersecting && timer) { clearInterval(timer); timer = null; }
+        }, { threshold: 0.3 }).observe(pipe);
+      } else { paint(); }
+    }
+
+    /* ---------- LinkedIn feed ---------- */
+    var postsEl = $("posts");
+    var isHttps = function (u) { return typeof u === "string" && /^https:\/\//i.test(u); };
+    var plain = function (html) { var d = new DOMParser().parseFromString(String(html || ""), "text/html"); return (d.body.textContent || "").replace(/\s+/g, " ").trim(); };
+    var clip = function (s, n) { return s.length > n ? s.slice(0, n - 1).trim() + "\u2026" : s; };
+    var fmtDate = function (v) {
       if (!v) return "";
-      var s = String(v);
-      if (/^\d{4}-\d{2}-\d{2} \d/.test(s)) s = s.replace(" ", "T") + "Z";
-      var d = new Date(s);
-      if (isNaN(d)) return "";
+      var s = String(v); if (/^\d{4}-\d{2}-\d{2} \d/.test(s)) s = s.replace(" ", "T") + "Z";
+      var d = new Date(s); if (isNaN(d)) return "";
       return new Intl.DateTimeFormat("en-GB", { day: "numeric", month: "short", year: "numeric" }).format(d);
-    }
-
-    function clip(s, n) { return s.length > n ? s.slice(0, n - 1).trim() + "\u2026" : s; }
-
-    function renderEmpty() {
+    };
+    var renderEmpty = function () {
       postsEl.textContent = "";
-      var box = document.createElement("div");
-      box.className = "posts-empty";
-      var p = document.createElement("p");
-      p.textContent = "My latest posts on cloud security, Zero Trust and AI platforms are on LinkedIn.";
-      var a = document.createElement("a");
-      a.className = "btn btn-primary";
-      a.href = LINKEDIN_URL;
-      a.target = "_blank";
-      a.rel = "noopener";
-      a.textContent = "Read my latest posts";
-      box.appendChild(p);
-      box.appendChild(a);
-      postsEl.appendChild(box);
-    }
-
-    function renderPosts(list) {
+      var box = mk("div", "posts-empty");
+      box.appendChild(mk("p", "", "My latest posts on cloud security, Zero Trust and AI platforms are on LinkedIn."));
+      var a = mk("a", "btn btn-primary", "Read my latest posts"); a.href = LINKEDIN_URL; a.target = "_blank"; a.rel = "noopener";
+      box.appendChild(a); postsEl.appendChild(box);
+    };
+    var renderPosts = function (list) {
       var valid = list.filter(function (p) { return p && p.title && isHttps(p.url); }).slice(0, MAX_POSTS);
       if (!valid.length) { renderEmpty(); return; }
       postsEl.textContent = "";
       valid.forEach(function (p) {
-        var a = document.createElement("a");
-        a.className = "post";
-        a.href = p.url;
-        a.target = "_blank";
-        a.rel = "noopener";
-
-        var meta = document.createElement("div");
-        meta.className = "post-meta";
+        var a = mk("a", "post"); a.href = p.url; a.target = "_blank"; a.rel = "noopener";
+        var meta = mk("div", "post-meta");
         meta.innerHTML = '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>';
-        var d = document.createElement("span");
-        d.textContent = ["LinkedIn", fmtDate(p.date)].filter(Boolean).join(", ");
-        meta.appendChild(d);
-
-        var h = document.createElement("span");
-        h.className = "post-title";
-        h.textContent = clip(plain(p.title), 140);
-
-        a.appendChild(meta);
-        a.appendChild(h);
-
-        if (p.excerpt) {
-          var ex = document.createElement("span");
-          ex.className = "post-excerpt";
-          ex.textContent = clip(plain(p.excerpt), 220);
-          a.appendChild(ex);
-        }
-        var cta = document.createElement("span");
-        cta.className = "post-cta";
-        cta.textContent = "Read on LinkedIn";
-        a.appendChild(cta);
-        postsEl.appendChild(a);
+        meta.appendChild(mk("span", "", ["LinkedIn", fmtDate(p.date)].filter(Boolean).join(", ")));
+        a.appendChild(meta); a.appendChild(mk("span", "post-title", clip(plain(p.title), 140)));
+        if (p.excerpt) a.appendChild(mk("span", "post-excerpt", clip(plain(p.excerpt), 220)));
+        a.appendChild(mk("span", "post-cta", "Read on LinkedIn")); postsEl.appendChild(a);
       });
+    };
+    if (postsEl) {
+      if (!FEED_URL) { renderPosts(POSTS); }
+      else {
+        fetch("https://api.rss2json.com/v1/api.json?rss_url=" + encodeURIComponent(FEED_URL))
+          .then(function (r) { return r.json(); })
+          .then(function (d) {
+            if (d && d.status === "ok" && d.items && d.items.length) {
+              renderPosts(d.items.map(function (i) { return { title: i.title, date: i.pubDate, url: i.link, excerpt: i.description }; }));
+            } else { renderPosts(POSTS); }
+          })
+          .catch(function () { renderPosts(POSTS); });
+      }
     }
 
-    function loadPosts() {
-      if (!FEED_URL) { renderPosts(POSTS); return; }
-      var api = "https://api.rss2json.com/v1/api.json?rss_url=" + encodeURIComponent(FEED_URL);
-      fetch(api)
-        .then(function (r) { return r.json(); })
-        .then(function (data) {
-          if (data && data.status === "ok" && data.items && data.items.length) {
-            renderPosts(data.items.map(function (i) {
-              return { title: i.title, date: i.pubDate, url: i.link, excerpt: i.description };
-            }));
-          } else { renderPosts(POSTS); }
-        })
-        .catch(function () { renderPosts(POSTS); });
-    }
-    if (postsEl) loadPosts();
-
-    /* =====================================================================
-       4. THEME TOGGLE, COPY EMAIL, FOOTER YEAR
-       ===================================================================== */
-    var root = document.documentElement;
-    var toggle = document.getElementById("themeToggle");
-    if (toggle) {
-      toggle.addEventListener("click", function () {
-        var explicit = root.getAttribute("data-theme");
-        var systemDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-        var isDark = explicit ? explicit === "dark" : systemDark;
-        var next = isDark ? "light" : "dark";
-        root.setAttribute("data-theme", next);
-        try { localStorage.setItem("theme", next); } catch (e) {}
-      });
-    }
-
-    var copyBtn = document.getElementById("copyMail");
+    /* ---------- Copy email and footer year ---------- */
+    var copyBtn = $("copyMail");
     if (copyBtn) {
       copyBtn.addEventListener("click", function () {
-        var done = function (msg) {
-          copyBtn.textContent = msg;
-          setTimeout(function () { copyBtn.textContent = "Copy address"; }, 2000);
-        };
+        var done = function (m) { copyBtn.textContent = m; setTimeout(function () { copyBtn.textContent = "Copy address"; }, 2000); };
         if (navigator.clipboard && navigator.clipboard.writeText) {
           navigator.clipboard.writeText("fawazdanny@gmail.com").then(function () { done("Copied"); }, function () { done("Copy failed"); });
         } else { done("Copy failed"); }
       });
     }
-
-    var y = document.getElementById("year");
-    if (y) y.textContent = new Date().getFullYear();
+    var y = $("year"); if (y) y.textContent = new Date().getFullYear();
   })();
   </script>
 </body>
