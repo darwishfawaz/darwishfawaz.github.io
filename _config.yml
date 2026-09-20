@@ -1,8 +1,7 @@
-title: Darwish Fawaz | Infrastructure & Security Architect
-description: Portfolio and professional site for Darwish Fawaz - Infrastructure & Security Architect.
+title: Darwish Fawaz | Cloud & Cybersecurity Advisor
+description: Strategic enterprise cloud architecture, Zero Trust transformation, and FinOps advisory.
 url: "https://darwishfawaz.github.io"
 
-# GitHub Pages / Jekyll configurations
 theme: jekyll-theme-primer
 sass:
   style: compressed
