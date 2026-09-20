@@ -1,16 +1,12 @@
 title: "Darwish Fawaz"
 
-description: >
-  Darwish Fawaz — Infrastructure & Security Architect specialising in
-  secure cloud and hybrid infrastructure, security architecture,
-  identity, resilience and compliance.
+description: "Infrastructure & Security Architect"
 
 url: "https://darwishfawaz.github.io"
+baseurl: ""
 
 author:
   name: "Darwish Fawaz"
-
-github_username: "darwishfawaz"
 
 markdown: kramdown
 
@@ -18,6 +14,7 @@ kramdown:
   input: GFM
 
 sass:
+  sass_dir: assets/css
   style: compressed
 
 exclude:
