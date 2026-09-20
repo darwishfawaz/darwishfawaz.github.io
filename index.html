@@ -1,1492 +1,510 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta charset="UTF-8">
+  <meta name="description"
+        content="Darwish Fawaz — Infrastructure & Security Architect specialising in secure cloud, hybrid infrastructure, identity, security architecture and compliance.">
 
-<meta name="viewport"
-      content="width=device-width, initial-scale=1.0">
+  <title>Darwish Fawaz | Infrastructure & Security Architect</title>
 
-<meta name="description"
-      content="Darwish Fawaz — Infrastructure & Security Architect. Designing secure, resilient and compliant enterprise infrastructure across cloud, security and hybrid platforms.">
-
-<title>
-Darwish Fawaz | Infrastructure & Security Architect
-</title>
-
-
-<style>
-
-/* =========================================================
-   DF — INFRASTRUCTURE & SECURITY ARCHITECTURE
-   ========================================================= */
-
-:root {
-
-    --teal: #03313A;
-    --aqua: #8FFFE0;
-
-    --text: #10282C;
-    --muted: #65787B;
-
-    --light: #F5F9F8;
-    --line: #DCE8E6;
-
-    --white: #FFFFFF;
-}
-
-
-/* =========================================================
-   RESET
-   ========================================================= */
-
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-
-    font-family:
-        Inter,
-        -apple-system,
-        BlinkMacSystemFont,
-        "Segoe UI",
-        Arial,
-        sans-serif;
-
-    color: var(--text);
-
-    background: white;
-
-    line-height: 1.6;
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-
-/* =========================================================
-   NAVIGATION
-   ========================================================= */
-
-nav {
-
-    height: 72px;
-
-    background: var(--teal);
-
-    border-bottom:
-        1px solid rgba(143,255,224,.12);
-}
-
-
-.nav {
-
-    width: min(1120px, 90%);
-
-    height: 100%;
-
-    margin: auto;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: space-between;
-}
-
-
-.brand {
-
-    display: flex;
-
-    align-items: center;
-
-    gap: 12px;
-
-    color: white;
-
-    font-size: 16px;
-
-    font-weight: 700;
-}
-
-
-.brand-mark {
-
-    width: 35px;
-
-    height: 35px;
-
-    display: grid;
-
-    place-items: center;
-
-    border-radius: 8px;
-
-    background: var(--aqua);
-
-    color: var(--teal);
-
-    font-size: 12px;
-
-    font-weight: 900;
-}
-
-
-.nav-links {
-
-    display: flex;
-
-    gap: 30px;
-
-    color: #C8DCD9;
-
-    font-size: 14px;
-
-    font-weight: 600;
-}
-
-
-.nav-links a:hover {
-
-    color: var(--aqua);
-}
-
-
-/* =========================================================
-   HERO
-   ========================================================= */
-
-.hero {
-
-    background: var(--teal);
-
-    color: white;
-
-    min-height: 650px;
-
-    display: flex;
-
-    align-items: center;
-}
-
-
-.hero-inner {
-
-    width: min(1120px, 90%);
-
-    margin: auto;
-
-    padding: 105px 0 115px;
-}
-
-
-.eyebrow {
-
-    color: var(--aqua);
-
-    font-size: 12px;
-
-    font-weight: 800;
-
-    letter-spacing: 2.5px;
-
-    text-transform: uppercase;
-
-    margin-bottom: 25px;
-}
-
-
-.hero h1 {
-
-    max-width: 950px;
-
-    font-size:
-        clamp(48px, 7vw, 82px);
-
-    line-height: .98;
-
-    letter-spacing: -4px;
-
-    font-weight: 700;
-
-    margin-bottom: 30px;
-}
-
-
-.hero h1 span {
-
-    color: var(--aqua);
-}
-
-
-.hero-subtitle {
-
-    max-width: 750px;
-
-    font-size:
-        clamp(21px, 3vw, 29px);
-
-    line-height: 1.3;
-
-    font-weight: 400;
-
-    margin-bottom: 25px;
-}
-
-
-.hero-text {
-
-    max-width: 760px;
-
-    color: #C5D9D6;
-
-    font-size: 18px;
-
-    line-height: 1.8;
-}
-
-
-.hero-links {
-
-    display: flex;
-
-    flex-wrap: wrap;
-
-    gap: 12px;
-
-    margin-top: 38px;
-}
-
-
-.button {
-
-    padding: 11px 20px;
-
-    border-radius: 7px;
-
-    font-size: 14px;
-
-    font-weight: 700;
-}
-
-
-.button-main {
-
-    background: var(--aqua);
-
-    color: var(--teal);
-}
-
-
-.button-outline {
-
-    color: white;
-
-    border:
-        1px solid #557177;
-}
-
-
-.button-outline:hover {
-
-    border-color: var(--aqua);
-
-    color: var(--aqua);
-}
-
-
-/* =========================================================
-   MAIN
-   ========================================================= */
-
-main {
-
-    width: min(1120px, 90%);
-
-    margin: auto;
-}
-
-
-section {
-
-    padding: 110px 0;
-
-    border-bottom:
-        1px solid var(--line);
-}
-
-
-.section-title {
-
-    max-width: 750px;
-
-    margin-bottom: 55px;
-}
-
-
-.section-title small {
-
-    display: block;
-
-    color: #398C80;
-
-    font-size: 12px;
-
-    font-weight: 800;
-
-    letter-spacing: 2px;
-
-    text-transform: uppercase;
-
-    margin-bottom: 13px;
-}
-
-
-.section-title h2 {
-
-    color: var(--teal);
-
-    font-size:
-        clamp(34px, 5vw, 52px);
-
-    line-height: 1.1;
-
-    letter-spacing: -2px;
-}
-
-
-.section-title p {
-
-    margin-top: 20px;
-
-    color: var(--muted);
-
-    font-size: 17px;
-
-    line-height: 1.8;
-}
-
-
-/* =========================================================
-   ARCHITECTURE STATEMENT
-   ========================================================= */
-
-.architecture-statement {
-
-    display: grid;
-
-    grid-template-columns:
-        1.3fr 1fr;
-
-    gap: 70px;
-
-    align-items: center;
-}
-
-
-.architecture-statement h3 {
-
-    color: var(--teal);
-
-    font-size: 30px;
-
-    line-height: 1.3;
-
-    letter-spacing: -1px;
-}
-
-
-.architecture-statement p {
-
-    color: var(--muted);
-
-    font-size: 16px;
-
-    line-height: 1.8;
-
-    margin-top: 18px;
-}
-
-
-.architecture-box {
-
-    padding: 35px;
-
-    background: var(--teal);
-
-    color: white;
-
-    border-radius: 10px;
-}
-
-
-.architecture-box strong {
-
-    display: block;
-
-    color: var(--aqua);
-
-    font-size: 19px;
-
-    margin-bottom: 15px;
-}
-
-
-.architecture-box p {
-
-    color: #C7DAD7;
-
-    font-size: 14px;
-}
-
-
-/* =========================================================
-   AREAS OF ARCHITECTURE
-   ========================================================= */
-
-.architecture-grid {
-
-    display: grid;
-
-    grid-template-columns:
-        repeat(3, 1fr);
-
-    border-top:
-        1px solid var(--line);
-}
-
-
-.architecture-item {
-
-    padding: 32px 28px;
-
-    border-bottom:
-        1px solid var(--line);
-}
-
-
-.architecture-item:not(:nth-child(3n)) {
-
-    border-right:
-        1px solid var(--line);
-}
-
-
-.architecture-number {
-
-    color: #4AA898;
-
-    font-size: 11px;
-
-    font-weight: 800;
-
-    letter-spacing: 1px;
-
-    margin-bottom: 15px;
-}
-
-
-.architecture-item h3 {
-
-    color: var(--teal);
-
-    font-size: 20px;
-
-    margin-bottom: 9px;
-}
-
-
-.architecture-item p {
-
-    color: var(--muted);
-
-    font-size: 14px;
-
-    line-height: 1.7;
-}
-
-
-/* =========================================================
-   COMPLIANCE
-   ========================================================= */
-
-.compliance {
-
-    background: var(--light);
-
-    margin-left:
-        calc((1120px - 100vw) / 2);
-
-    margin-right:
-        calc((1120px - 100vw) / 2);
-
-    padding-left:
-        max(5%, calc((100vw - 1120px) / 2));
-
-    padding-right:
-        max(5%, calc((100vw - 1120px) / 2));
-}
-
-
-.compliance-intro {
-
-    max-width: 780px;
-
-    color: var(--muted);
-
-    font-size: 18px;
-
-    line-height: 1.8;
-
-    margin-bottom: 45px;
-}
-
-
-.frameworks {
-
-    display: flex;
-
-    flex-wrap: wrap;
-
-    gap: 12px;
-}
-
-
-.framework {
-
-    background: white;
-
-    border:
-        1px solid var(--line);
-
-    padding: 13px 18px;
-
-    border-radius: 6px;
-
-    color: var(--teal);
-
-    font-size: 14px;
-
-    font-weight: 700;
-}
-
-
-.compliance-note {
-
-    margin-top: 40px;
-
-    max-width: 850px;
-
-    color: var(--muted);
-
-    font-size: 14px;
-
-    line-height: 1.8;
-}
-
-
-/* =========================================================
-   SELECTED WORK
-   ========================================================= */
-
-.work {
-
-    display: grid;
-
-    grid-template-columns:
-        1fr 1fr;
-
-    gap: 70px;
-}
-
-
-.work-item {
-
-    padding-top: 20px;
-
-    border-top:
-        2px solid var(--teal);
-}
-
-
-.work-item small {
-
-    color: #398C80;
-
-    font-size: 11px;
-
-    font-weight: 800;
-
-    letter-spacing: 1.5px;
-}
-
-
-.work-item h3 {
-
-    color: var(--teal);
-
-    font-size: 25px;
-
-    margin: 10px 0;
-}
-
-
-.work-item p {
-
-    color: var(--muted);
-
-    font-size: 15px;
-
-    line-height: 1.8;
-}
-
-
-/* =========================================================
-   TECHNOLOGY
-   ========================================================= */
-
-.technology {
-
-    display: flex;
-
-    flex-wrap: wrap;
-
-    gap: 8px;
-}
-
-
-.technology span {
-
-    padding: 7px 11px;
-
-    background: white;
-
-    border:
-        1px solid var(--line);
-
-    border-radius: 5px;
-
-    color: var(--teal);
-
-    font-size: 13px;
-
-    font-weight: 600;
-}
-
-
-/* =========================================================
-   CLOSING STATEMENT
-   ========================================================= */
-
-.closing {
-
-    background: var(--teal);
-
-    color: white;
-
-    margin-top: 0;
-
-    padding: 100px 0;
-}
-
-
-.closing-inner {
-
-    width: min(1120px, 90%);
-
-    margin: auto;
-}
-
-
-.closing h2 {
-
-    max-width: 800px;
-
-    font-size:
-        clamp(38px, 5vw, 62px);
-
-    line-height: 1.05;
-
-    letter-spacing: -2.5px;
-}
-
-
-.closing h2 span {
-
-    color: var(--aqua);
-}
-
-
-.closing p {
-
-    max-width: 700px;
-
-    margin-top: 22px;
-
-    color: #C4D9D6;
-
-    font-size: 17px;
-}
-
-
-.closing-link {
-
-    display: inline-block;
-
-    margin-top: 30px;
-
-    color: var(--aqua);
-
-    font-weight: 700;
-}
-
-
-/* =========================================================
-   FOOTER
-   ========================================================= */
-
-footer {
-
-    background: var(--teal);
-
-    color: #789995;
-
-    text-align: center;
-
-    padding: 25px;
-
-    font-size: 12px;
-}
-
-
-/* =========================================================
-   MOBILE
-   ========================================================= */
-
-@media (max-width: 800px) {
-
-    .nav-links {
-        display: none;
-    }
-
-    .hero {
-        min-height: 570px;
-    }
-
-    .hero h1 {
-        letter-spacing: -3px;
-    }
-
-    section {
-        padding: 75px 0;
-    }
-
-    .architecture-statement {
-        grid-template-columns: 1fr;
-
-        gap: 35px;
-    }
-
-    .architecture-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .architecture-item:not(:nth-child(3n)) {
-        border-right: none;
-    }
-
-    .work {
-        grid-template-columns: 1fr;
-
-        gap: 45px;
-    }
-
-    .compliance {
-        margin-left: -5.5%;
-        margin-right: -5.5%;
-
-        padding-left: 5.5%;
-        padding-right: 5.5%;
-    }
-
-}
-
-</style>
-
+  <link rel="stylesheet" href="style.css">
 </head>
-
 
 <body>
 
+  <!-- =========================
+       HEADER
+  ========================== -->
 
-<!-- =====================================================
-     NAVIGATION
-     ===================================================== -->
+  <header class="site-header">
+    <div class="container nav">
 
-<nav>
+      <a class="brand" href="#home">
+        <span class="brand-mark">DF</span>
+        <span>Darwish Fawaz</span>
+      </a>
 
-<div class="nav">
+      <nav aria-label="Primary navigation">
+        <a class="active" href="#home">Home</a>
+        <a href="#architecture">Architecture</a>
+        <a href="#security">Security</a>
+        <a href="#compliance">Compliance</a>
+        <a href="#work">Work</a>
+        <a href="#contact">Contact</a>
+      </nav>
 
-<a href="#" class="brand">
+    </div>
+  </header>
 
-<span class="brand-mark">DF</span>
 
-<span>Darwish Fawaz</span>
+  <main>
 
-</a>
+    <!-- =========================
+         HERO
+    ========================== -->
 
+    <section id="home" class="hero">
 
-<div class="nav-links">
+      <div class="container hero-grid">
 
-<a href="#architecture">Architecture</a>
+        <div class="hero-copy">
 
-<a href="#security">Security</a>
+          <p class="eyebrow">
+            INFRASTRUCTURE &amp; SECURITY ARCHITECT
+          </p>
 
-<a href="#compliance">Compliance</a>
+          <h1>
+            Secure Infrastructure.<br>
+            Resilient Organisations.<br>
+            <span>Built for What's Next.</span>
+          </h1>
 
-<a href="#work">Experience</a>
+          <p class="hero-text">
+            I design secure, resilient and compliant infrastructure and
+            security architectures that enable organisations to operate,
+            transform and meet their regulatory obligations — today and tomorrow.
+          </p>
 
-<a href="#contact">Contact</a>
+          <div class="actions">
 
-</div>
+            <a class="button button-primary" href="#contact">
+              Get in touch <span>→</span>
+            </a>
 
-</div>
+            <a class="button button-secondary" href="#work">
+              View my work
+            </a>
 
-</nav>
+          </div>
 
+        </div>
 
 
-<!-- =====================================================
-     HERO
-     ===================================================== -->
+        <div class="hero-visual" aria-hidden="true">
 
-<header class="hero">
+          <div class="hero-shape">
 
-<div class="hero-inner">
+            <div class="hero-image"></div>
 
-<div class="eyebrow">
-Enterprise Infrastructure &amp; Security Architecture
-</div>
+            <div class="hero-cut"></div>
 
+          </div>
 
-<h1>
+          <div class="hero-labels">
+            <span>CLOUD</span>
+            <span>SECURITY</span>
+            <span>ARCHITECTURE</span>
+            <span>COMPLIANCE</span>
+            <span>RESILIENCE</span>
+          </div>
 
-Building <span>secure</span><br>
-infrastructure for<br>
-the enterprise.
+        </div>
 
-</h1>
+      </div>
 
+    </section>
 
-<div class="hero-subtitle">
 
-Infrastructure &amp; Security Architect
+    <!-- =========================
+         ARCHITECTURE
+    ========================== -->
 
-</div>
+    <section id="architecture" class="section architecture">
 
+      <div class="container architecture-grid">
 
-<p class="hero-text">
+        <div>
 
-I design resilient cloud and hybrid infrastructure,
-security architectures and identity platforms that
-enable organisations to modernise securely, reduce
-risk and meet their regulatory and compliance obligations.
+          <p class="eyebrow">
+            ARCHITECTURE FOCUS
+          </p>
 
-</p>
+          <h2>
+            End-to-end architecture for secure, modern enterprises.
+          </h2>
 
+          <p class="section-intro">
+            I bridge infrastructure, security and governance to build
+            platforms that are scalable, compliant and operationally resilient.
+          </p>
 
-<div class="hero-links">
+        </div>
 
-<!-- CHANGE EMAIL -->
 
-<a
-href="mailto:YOUR_EMAIL"
-class="button button-main">
+        <div class="capability-grid">
 
-Get in touch
+          <div class="capability">
+            <div class="icon">⌁</div>
+            <h3>Cloud &amp; Hybrid Infrastructure</h3>
+          </div>
 
-</a>
+          <div class="capability">
+            <div class="icon">◇</div>
+            <h3>Security Architecture</h3>
+          </div>
 
+          <div class="capability">
+            <div class="icon">◌</div>
+            <h3>Identity &amp; Access Management</h3>
+          </div>
 
-<a
-href="https://www.linkedin.com/"
-class="button button-outline">
+          <div class="capability">
+            <div class="icon">▱</div>
+            <h3>Platform Engineering</h3>
+          </div>
 
-LinkedIn
+          <div class="capability">
+            <div class="icon">⌘</div>
+            <h3>Networking &amp; Connectivity</h3>
+          </div>
 
-</a>
+          <div class="capability">
+            <div class="icon">◫</div>
+            <h3>Data Protection &amp; Governance</h3>
+          </div>
 
+          <div class="capability">
+            <div class="icon">✓</div>
+            <h3>Risk &amp; Compliance</h3>
+            <p>NIST, SOC 2, ISO 27001</p>
+          </div>
 
-<a
-href="https://github.com/darwishfawaz"
-class="button button-outline">
+          <div class="capability">
+            <div class="icon">⚙</div>
+            <h3>Operations &amp; Resilience</h3>
+          </div>
 
-GitHub
+        </div>
 
-</a>
+      </div>
 
-</div>
+    </section>
 
-</div>
 
-</header>
+    <!-- =========================
+         SECURITY
+    ========================== -->
 
+    <section id="security" class="security-section">
 
+      <div class="container security-grid">
 
-<main>
+        <div>
 
+          <p class="eyebrow eyebrow-light">
+            SECURITY ARCHITECTURE
+          </p>
 
-<!-- =====================================================
-     ARCHITECTURE
-     ===================================================== -->
+          <h2>
+            Security engineered into the platform.
+          </h2>
 
-<section id="architecture">
+        </div>
 
-<div class="section-title">
 
-<small>
-01 / Architecture
-</small>
+        <div class="security-content">
 
-<h2>
-Architecture that connects strategy, security and delivery.
-</h2>
+          <p>
+            Security is treated as an architectural property rather than
+            a collection of controls added after delivery.
+          </p>
 
-<p>
+          <div class="security-list">
+            <span>Zero Trust</span>
+            <span>Identity &amp; Privilege</span>
+            <span>Cloud Security</span>
+            <span>Data Protection</span>
+            <span>Threat &amp; Risk</span>
+            <span>Resilience</span>
+          </div>
 
-I operate across the infrastructure and security
-boundary — translating business requirements,
-risk and regulatory expectations into practical
-enterprise architectures.
+        </div>
 
-</p>
+      </div>
 
-</div>
+    </section>
 
 
-<div class="architecture-statement">
+    <!-- =========================
+         COMPLIANCE
+    ========================== -->
 
+    <section id="compliance" class="compliance-section">
 
-<div>
+      <div class="container compliance-grid">
 
-<h3>
+        <div>
 
-From architecture strategy to
-secure implementation.
+          <p class="eyebrow eyebrow-aqua">
+            COMPLIANCE &amp; GOVERNANCE
+          </p>
 
-</h3>
+          <h2>
+            Turn compliance into a
+            <span>strategic advantage.</span>
+          </h2>
 
-<p>
+        </div>
 
-I work across HLD, LLD, platform engineering,
-security architecture and operational transformation —
-bridging the gap between architectural intent and
-technology that actually runs the business.
 
-</p>
+        <div class="compliance-copy">
 
-</div>
+          <p>
+            I help organisations translate regulatory and compliance
+            requirements into practical technology controls — embedding
+            governance, security and evidence into the architecture rather
+            than treating them as an afterthought.
+          </p>
 
+          <p class="small-note">
+            The objective isn't simply to pass an audit. It is to establish
+            architecture, controls, ownership and evidence that make security
+            and compliance part of normal technology operations.
+          </p>
 
-<div class="architecture-box">
+        </div>
 
-<strong>
-Secure. Resilient. Governed.
-</strong>
 
-<p>
+        <div class="frameworks">
 
-Infrastructure designed with security,
-identity, resilience, observability and
-compliance built into the foundation.
+          <span>✓ NIST CSF</span>
+          <span>✓ NIST 800-53</span>
+          <span>✓ ISO 27001</span>
+          <span>✓ SOC 2</span>
+          <span>✓ CIS Controls</span>
+          <span>✓ GDPR</span>
+          <span>✓ DORA</span>
 
-</p>
+        </div>
 
-</div>
+      </div>
 
+    </section>
 
-</div>
 
-</section>
+    <!-- =========================
+         SELECTED WORK
+    ========================== -->
 
+    <section id="work" class="section work-section">
 
+      <div class="container">
 
-<!-- =====================================================
-     SECURITY ARCHITECTURE
-     ===================================================== -->
+        <div class="work-heading">
 
-<section id="security">
+          <div>
 
-<div class="section-title">
+            <p class="eyebrow">
+              SELECTED WORK
+            </p>
 
-<small>
-02 / Security Architecture
-</small>
+            <h2>
+              Real-world solutions.<br>
+              Measurable outcomes.
+            </h2>
 
-<h2>
-Security engineered into the platform.
-</h2>
+          </div>
 
-<p>
+          <p>
+            Architecture and delivery experience across cloud, security
+            and hybrid environments — helping organisations strengthen
+            their security posture, improve resilience and achieve compliance.
+          </p>
 
-Security isn't a layer added after infrastructure is built.
-It is an architectural property of the platform itself.
+        </div>
 
-</p>
 
-</div>
+        <div class="work-grid">
 
+          <article class="work-card">
 
-<div class="architecture-grid">
+            <p class="card-label">
+              CLOUD &amp; SECURITY
+            </p>
 
+            <h3>
+              Secure Cloud Platform
+            </h3>
 
-<div class="architecture-item">
+            <p>
+              Designed a secure landing zone with network segmentation,
+              identity, monitoring and governance.
+            </p>
 
-<div class="architecture-number">
-01
-</div>
+          </article>
 
-<h3>
-Zero Trust
-</h3>
 
-<p>
+          <article class="work-card">
 
-Identity-first access, Conditional Access,
-device trust, segmentation and continuous
-evaluation.
+            <p class="card-label">
+              IDENTITY &amp; ZERO TRUST
+            </p>
 
-</p>
+            <h3>
+              Identity Transformation
+            </h3>
 
-</div>
+            <p>
+              Implemented Entra ID, Conditional Access and PIM to strengthen
+              identity and access controls.
+            </p>
 
+          </article>
 
-<div class="architecture-item">
 
-<div class="architecture-number">
-02
-</div>
+          <article class="work-card">
 
-<h3>
-Identity &amp; Privilege
-</h3>
+            <p class="card-label">
+              COMPLIANCE
+            </p>
 
-<p>
+            <h3>
+              Regulatory Readiness
+            </h3>
 
-Entra ID, privileged access, JIT administration,
-phishing-resistant authentication and governance.
+            <p>
+              Built architecture and controls to support NIST, SOC 2 and
+              ISO 27001 alignment, with audit evidence.
+            </p>
 
-</p>
+          </article>
 
-</div>
 
+          <article class="work-card">
 
-<div class="architecture-item">
+            <p class="card-label">
+              AUTOMATION &amp; IaC
+            </p>
 
-<div class="architecture-number">
-03
-</div>
+            <h3>
+              Infrastructure as Code
+            </h3>
 
-<h3>
-Cloud Security
-</h3>
+            <p>
+              Established Terraform and CI/CD pipelines for consistent,
+              secure and repeatable deployments.
+            </p>
 
-<p>
+          </article>
 
-Secure landing zones, network architecture,
-workload protection, posture management
-and security controls.
+        </div>
 
-</p>
+      </div>
 
-</div>
+    </section>
 
 
-<div class="architecture-item">
+    <!-- =========================
+         TECHNOLOGY
+    ========================== -->
 
-<div class="architecture-number">
-04
-</div>
+    <section class="technology-section">
 
-<h3>
-Resilience
-</h3>
+      <div class="container technology-grid">
 
-<p>
+        <div>
 
-High availability, disaster recovery, backup,
-business continuity and operational resilience.
+          <p class="eyebrow">
+            TECHNOLOGY
+          </p>
 
-</p>
+          <h2>
+            Modern platforms.<br>
+            Trusted technologies.
+          </h2>
 
-</div>
+        </div>
 
 
-<div class="architecture-item">
+        <div class="technology-list">
 
-<div class="architecture-number">
-05
-</div>
+          <span>Azure</span>
+          <span>Azure AI</span>
+          <span>AKS</span>
+          <span>Entra ID</span>
+          <span>Intune</span>
+          <span>Defender</span>
+          <span>Purview</span>
+          <span>Azure SQL</span>
+          <span>Databricks</span>
+          <span>Terraform</span>
+          <span>GitHub</span>
+          <span>Azure DevOps</span>
+          <span>VMware</span>
+          <span>Cisco</span>
+          <span>Windows</span>
+          <span>Linux</span>
+          <span>PowerShell</span>
 
-<h3>
-Data Protection
-</h3>
+        </div>
 
-<p>
+      </div>
 
-Data classification, information protection,
-DLP, DSPM and governed data pathways.
+    </section>
 
-</p>
 
-</div>
+    <!-- =========================
+         CONTACT
+    ========================== -->
 
+    <section id="contact" class="contact-section">
 
-<div class="architecture-item">
+      <div class="container contact-grid">
 
-<div class="architecture-number">
-06
-</div>
+        <div>
 
-<h3>
-Security Operations
-</h3>
+          <p class="eyebrow eyebrow-aqua">
+            LET'S CONNECT
+          </p>
 
-<p>
+          <h2>
+            Secure. Compliant.
+            <span>Future-ready.</span>
+          </h2>
 
-Security monitoring, detection, response,
-observability and measurable security posture.
+          <p>
+            Let's discuss how I can help your organisation build a stronger,
+            more resilient technology foundation.
+          </p>
 
-</p>
+        </div>
 
-</div>
+        <a class="button button-light" href="mailto:YOUR_EMAIL">
+          Get in touch →
+        </a>
 
+      </div>
 
-</div>
+    </section>
 
-</section>
+  </main>
 
 
+  <!-- =========================
+       FOOTER
+  ========================== -->
 
-<!-- =====================================================
-     COMPLIANCE
-     ===================================================== -->
+  <footer class="site-footer">
 
-<section id="compliance" class="compliance">
+    <div class="container footer-inner">
 
-<div class="section-title">
+      <p>
+        © 2026 Darwish Fawaz
+        &nbsp;·&nbsp;
+        Infrastructure &amp; Security Architect
+      </p>
 
-<small>
-03 / Governance &amp; Compliance
-</small>
+      <p>
+        <strong>DF</strong>
+        &nbsp;
+        Design · Build · Secure
+      </p>
 
-<h2>
-Helping organisations turn compliance into architecture.
-</h2>
+    </div>
 
-</div>
-
-
-<p class="compliance-intro">
-
-I help organisations translate regulatory and compliance
-requirements into practical technology controls —
-creating secure platforms that can be governed, measured
-and evidenced.
-
-</p>
-
-
-<div class="frameworks">
-
-<span class="framework">
-NIST CSF
-</span>
-
-<span class="framework">
-NIST 800-53
-</span>
-
-<span class="framework">
-ISO 27001
-</span>
-
-<span class="framework">
-SOC 2
-</span>
-
-<span class="framework">
-CIS Controls
-</span>
-
-<span class="framework">
-Zero Trust
-</span>
-
-<span class="framework">
-GDPR
-</span>
-
-<span class="framework">
-DORA
-</span>
-
-</div>
-
-
-<p class="compliance-note">
-
-The objective isn't simply to "pass an audit".
-It is to establish architecture, controls, ownership
-and evidence that make security and compliance part
-of normal technology operations.
-
-</p>
-
-</section>
-
-
-
-<!-- =====================================================
-     SELECTED EXPERIENCE
-     ===================================================== -->
-
-<section id="work">
-
-<div class="section-title">
-
-<small>
-04 / Selected Architecture Work
-</small>
-
-<h2>
-Enterprise transformation in practice.
-</h2>
-
-</div>
-
-
-<div class="work">
-
-
-<article class="work-item">
-
-<small>
-CLOUD • AI • SECURITY
-</small>
-
-<h3>
-Secure AI Platform
-</h3>
-
-<p>
-
-Designed secure AI platform architecture covering
-private connectivity, identity, governed data pathways,
-security controls, workload isolation and enterprise
-AI guardrails.
-
-</p>
-
-</article>
-
-
-<article class="work-item">
-
-<small>
-INFRASTRUCTURE • PLATFORM
-</small>
-
-<h3>
-Enterprise Container Platform
-</h3>
-
-<p>
-
-Architected a modern container platform and automated
-delivery model, reducing reliance on traditional
-VM-based application processing.
-
-</p>
-
-</article>
-
-
-<article class="work-item">
-
-<small>
-ZERO TRUST • IAM
-</small>
-
-<h3>
-Identity Security Transformation
-</h3>
-
-<p>
-
-Designed identity-first security controls incorporating
-Conditional Access, Privileged Identity Management,
-phishing-resistant authentication and Zero Trust access.
-
-</p>
-
-</article>
-
-
-<article class="work-item">
-
-<small>
-AUTOMATION • IaC
-</small>
-
-<h3>
-Infrastructure as Code
-</h3>
-
-<p>
-
-Established repeatable infrastructure deployment
-patterns using Terraform and CI/CD, improving
-consistency, governance and operational control.
-
-</p>
-
-</article>
-
-
-</div>
-
-</section>
-
-
-
-<!-- =====================================================
-     TECHNOLOGY
-     ===================================================== -->
-
-<section>
-
-<div class="section-title">
-
-<small>
-05 / Technology
-</small>
-
-<h2>
-The platforms behind the architecture.
-</h2>
-
-</div>
-
-
-<div class="technology">
-
-<span>Microsoft Azure</span>
-
-<span>Azure AI</span>
-
-<span>Azure Kubernetes Service</span>
-
-<span>Microsoft Entra ID</span>
-
-<span>Microsoft Intune</span>
-
-<span>Microsoft Defender</span>
-
-<span>Microsoft Purview</span>
-
-<span>Azure Networking</span>
-
-<span>Azure SQL</span>
-
-<span>Databricks</span>
-
-<span>Terraform</span>
-
-<span>GitHub</span>
-
-<span>Azure DevOps</span>
-
-<span>PowerShell</span>
-
-<span>VMware</span>
-
-<span>Cisco</span>
-
-<span>Windows</span>
-
-<span>Linux</span>
-
-</div>
-
-</section>
-
-
-</main>
-
-
-
-<!-- =====================================================
-     CLOSING
-     ===================================================== -->
-
-<section class="closing" id="contact">
-
-<div class="closing-inner">
-
-<h2>
-
-Designing infrastructure
-that is <span>secure by design.</span>
-
-</h2>
-
-
-<p>
-
-Helping organisations modernise their infrastructure,
-strengthen security, improve resilience and build the
-foundations required to operate confidently in a
-regulated world.
-
-</p>
-
-
-<!-- CHANGE EMAIL -->
-
-<a
-href="mailto:YOUR_EMAIL"
-class="closing-link">
-
-Start a conversation →
-
-</a>
-
-</div>
-
-</section>
-
-
-
-<footer>
-
-© 2026 Darwish Fawaz
-· Infrastructure &amp; Security Architect
-
-</footer>
-
+  </footer>
 
 </body>
-
 </html>
